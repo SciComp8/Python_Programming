@@ -1,6 +1,13 @@
 # Major types of errors in Python programming
 ## Syntax Errors
 The syntax errors are detected by the compiler or the interpreter.
+### Concatenate 2 different types of objects
+  ```python
+  print('6 % 6 = ' + 6 % 6)
+    Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+  TypeError: can only concatenate str (not "int") to str
+  ```
 
 ### Wrongly written keywords
   ```python
