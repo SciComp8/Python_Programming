@@ -1,3 +1,17 @@
+#define and set variables from user input (casted to a float)
+total_reads = float(input("Enter the total number of reads: "))
+mutant_reads = float(input("Enter the number of mutant reads: "))
+
+#calculate the mutational frequency
+mutational_frequency = (mutant_reads / total_reads) * 100  #calculate the frequency in percentage
+
+#round the mutational frequency to 2 decimal places
+mutational_frequency = round(mutational_frequency, 2)
+
+#print the final mutational frequency
+print("The mutational frequency is ", mutational_frequency, "%", sep='')
+
+
 def math_2_num(x, y):
     if y == 0:
         raise ValueError("Division by zero is not allowed.")
