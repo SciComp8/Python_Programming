@@ -2,7 +2,7 @@
 
 Presenting a curated compilation of Python codes inspired from *Python Programming*, *AI in Medicine*, *Data Science*, *Bioinformatics Algorithm*, and *Computer Science with Python*. This repository is a library housing Python's real-world applications across varied scientific computing domains. 
 
-| Python \n Basics | Python Advance | Data Structure | Artificial Intelligence | 
+| Python Basics | Python Advance | Data Structure | Artificial Intelligence | 
 |----------|----------|----------|----------|
 | [Python Overview](Python_Overview.ipynb) | [Decorator](Utilities/Decorator.py) | [String](Utilities/String) | XXX | 
 | [Learn Errors Hard](*Error_Type.md) | XXX | [List](Utilities/List) | XXX | 
