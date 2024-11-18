@@ -1,4 +1,4 @@
-# Python Computing Library
+# Python Computing Compendium
 
 Presenting a curated compilation of Python codes inspired from *Python Programming*, *AI in Medicine*, *Data Science*, *Bioinformatics Algorithm*, and *Computer Science with Python*. This repository is a library housing Python's real-world applications across varied scientific computing domains. 
 
