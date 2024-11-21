@@ -48,6 +48,14 @@ TypeError: '>' not supported between instances of 'str' and 'int'
     File "<pyshell#44>", line 1, in <module>
     age = int(input('Please type your age: '))
   ValueError: invalid literal for int() with base 10: 'Sixteen'
+
+  age = input('Please type your age: ')
+
+  try:
+      age = int(age)
+      print('How old will you be in 2 year?', age + 1)
+  except ValueError:
+      print('The given age is not valid')
   ```
 ### Setting extra parameters
   ```python
