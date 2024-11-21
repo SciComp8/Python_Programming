@@ -83,4 +83,7 @@ The syntax errors indicate the syntax or structure of the code is incorrect. The
 
 ## Logical Errors
 
+## More reading
+- https://docs.python.org/3/tutorial/errors.html
+
 
