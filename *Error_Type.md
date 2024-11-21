@@ -50,7 +50,6 @@ TypeError: '>' not supported between instances of 'str' and 'int'
   ValueError: invalid literal for int() with base 10: 'Sixteen'
 
   age = input('Please type your age: ')
-
   try:
       age = int(age)
       print('How old will you be in 2 year?', age + 1)
