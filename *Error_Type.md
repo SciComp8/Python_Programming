@@ -40,6 +40,15 @@ TypeError: '>' not supported between instances of 'str' and 'int'
   ----> 1 devide_two(98.920)
   NameError: name 'devide_two' is not defined
   ```
+### Wrong input
+  ```python
+  age = int(input('Please type your age: '))
+  Sixteen
+  Traceback (most recent call last):
+    File "<pyshell#44>", line 1, in <module>
+    age = int(input('Please type your age: '))
+  ValueError: invalid literal for int() with base 10: 'Sixteen'
+  ```
 ### Setting extra parameters
   ```python
   TypeError                                 Traceback (most recent call last)
@@ -56,7 +65,9 @@ TypeError: '>' not supported between instances of 'str' and 'int'
   SyntaxError: two starred expressions in assignment
   ```
 ### Wrong use of an operator
+
 ### Forgetting parentheses in a function call
+
 ### Call the locally scoped function
   ```python
   def house():
