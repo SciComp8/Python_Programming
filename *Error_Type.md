@@ -8,6 +8,15 @@ The syntax errors indicate the syntax or structure of the code is incorrect. The
     File "<stdin>", line 1, in <module>
   TypeError: can only concatenate str (not "int") to str
   ```
+### Compare a number with a string
+```python
+age = input('Please type your age: ')
+print('Are you older than 10?', age > 10)
+Traceback (most recent call last):
+  File "<pyshell#42>", line 1, in <module>
+    print('Are you older than 10?', age > 10)
+TypeError: '>' not supported between instances of 'str' and 'int'
+```
 
 ### Wrongly written keywords
   ```python
@@ -20,7 +29,6 @@ The syntax errors indicate the syntax or structure of the code is incorrect. The
   ```python
   a = 8
   print(AA)
-
   Traceback (most recent call last):
     File "<pyshell#37>", line 1, in <module>
     print(AA)
