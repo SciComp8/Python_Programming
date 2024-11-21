@@ -16,8 +16,16 @@ The syntax errors indicate the syntax or structure of the code is incorrect. The
   ^
   SyntaxError: 'return' outside function
   ```
-### Name is not defined (e.g., wrong function names)
+### Name is not defined (e.g., wrong variable/function names)
   ```python
+  a = 8
+  print(AA)
+
+  Traceback (most recent call last):
+    File "<pyshell#37>", line 1, in <module>
+    print(AA)
+  NameError: name 'AA' is not defined. Did you mean: 'aa'?
+
   NameError                                 Traceback (most recent call last)
   Cell In[18], line 1
   ----> 1 devide_two(98.920)
