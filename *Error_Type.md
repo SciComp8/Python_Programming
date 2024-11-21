@@ -16,7 +16,7 @@ The syntax errors indicate the syntax or structure of the code is incorrect. The
   ^
   SyntaxError: 'return' outside function
   ```
-### Wrong function names
+### Name is not defined (e.g., wrong function names)
   ```python
   NameError                                 Traceback (most recent call last)
   Cell In[18], line 1
