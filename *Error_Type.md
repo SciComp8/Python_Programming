@@ -124,7 +124,7 @@ TypeError: '>' not supported between instances of 'str' and 'int'
 
 # Handle errors
 ## Method 1: try-except-else or try-except
-## Case 1:
+### Case 1:
   ```python
   def cubic(number): 
       """Returns the cubic of a number."""
@@ -135,7 +135,7 @@ TypeError: '>' not supported between instances of 'str' and 'int'
           
   cubic('hello')
   ```
-## Case 1.1:
+### Case 1.1:
   ```python
   def cubic(number): 
       """Returns the cubic of a number."""
@@ -147,7 +147,7 @@ TypeError: '>' not supported between instances of 'str' and 'int'
   cubic('hello')
   ```
     
-## Case 2:
+### Case 2:
   ```python
   nums = [1, 2, "A"]
   sum_nums = 0
@@ -160,7 +160,7 @@ TypeError: '>' not supported between instances of 'str' and 'int'
           sum_nums += float_num 
           print(f"{sum_nums=}")
   ```
-# Case 3: bioinformatics scenarior: load the BAM file and print reads in a specific region
+### Case 3: bioinformatics scenarior: load the BAM file and print reads in a specific region
   ```python
   import pysam
   try:
@@ -176,7 +176,7 @@ TypeError: '>' not supported between instances of 'str' and 'int'
       bam_file.close()
   ```
 
-# Method 2: raise: 
+## Method 2: raise: 
   ```python
   def sqrt(number): 
       """Returns the square root of a number."""
