@@ -9,7 +9,7 @@ Presenting a curated compilation of Python codes inspired from *Python Programmi
 | [Manage Data Through Pandas](Utilities/pandas) | XXX | [Dictionary](Utilities/Dictionary) | XXX | 
 | [Use and Tailor Functions](Utilities/Function) | XXX | [Tuple](Utilities/Tuple) | XXX | 
 | [Flow Control](Utilities/Flow_Control) | XXX | [NumpyArray](Utilities/NumPy) | XXX | 
-| XXX | XXX | [Set](Utilities/Set) | XXX | 
+| [Arithmetic Calculations](Utilities/Math/Number) | XXX | [Set](Utilities/Set) | XXX | 
 | XXX | XXX | [Class](Utilities/Class) | XXX | 
 
 
