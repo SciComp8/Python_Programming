@@ -4,8 +4,8 @@ Presenting a curated compilation of Python codes inspired from *Python Programmi
 
 | Python Basics | Python Advance | Data Structure | Artificial Intelligence | 
 |----------|----------|----------|----------|
-| [Python Overview](Python_Overview.ipynb) | [Decorator](Utilities/Decorator.py) | [String](Utilities/String) | [Convolutional Neural Network](AI_Medicine_Homework/Programing_Assignment3.ipynb) | 
-| [Learn Errors Hard](*Learn_Errors.md) | XXX | [List](Utilities/List) | XXX | 
+| [Python Overview](Python_Overview.ipynb) | [Argument](Utilities/Argument.py) | [String](Utilities/String) | [Convolutional Neural Network](AI_Medicine_Homework/Programing_Assignment3.ipynb) | 
+| [Learn Errors Hard](*Learn_Errors.md) | [Decorator](Utilities/Decorator.py) | [List](Utilities/List) | XXX | 
 | [Manage Data Through Pandas](Utilities/pandas) | XXX | [Dictionary](Utilities/Dictionary) | XXX | 
 | [Use and Tailor Functions](Utilities/Function) | XXX | [Tuple](Utilities/Tuple) | XXX | 
 | [Flow Control](Utilities/Flow_Control) | XXX | [NumpyArray](Utilities/NumPy) | XXX | 
