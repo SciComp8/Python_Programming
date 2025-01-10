@@ -1,4 +1,6 @@
-# Python Computing Compendium
+# Python Computing Compendium 
+
+*Last updated: 10 Jan 2025*
 
 Presenting a curated compilation of Python codes inspired from *Python Programming*, *AI in Medicine*, *Data Science*, *Bioinformatics Algorithm*, and *Computer Science with Python*. This repository houses Python's real-world applications across varied scientific computing domains. 
 
