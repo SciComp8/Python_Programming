@@ -123,7 +123,7 @@ TypeError: '>' not supported between instances of 'str' and 'int'
 - https://docs.python.org/3/tutorial/errors.html
 
 # Handle errors
-## Method 1: try-except-else or try-except
+## Method 1: `try-except-else` or `try-except`
 ### Case 1:
   ```python
   def cubic(number): 
@@ -176,7 +176,7 @@ TypeError: '>' not supported between instances of 'str' and 'int'
       bam_file.close()
   ```
 
-## Method 2: raise: 
+## Method 2: `raise:`
   ```python
   def sqrt(number): 
       """Returns the square root of a number."""
