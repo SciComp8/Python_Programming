@@ -12,6 +12,6 @@ Presenting a curated compilation of Python codes inspired from *Python Programmi
 | [Use and Tailor Functions](Utilities/Function) | [Enumerate](Utilities/Tuple/Enumerate_Position.py) | [Tuple](Utilities/Tuple) | XXX | 
 | [Flow Control](Utilities/Flow_Control) | [Walrus operator](Utilities/Operator/:=.py) | [NumpyArray](Utilities/NumPy) | XXX | 
 | [Arithmetic Calculations](Utilities/Math/Number) | [Symbolic Calculations](Utilities/Symbolic_Computation.py) | [Set](Utilities/Set) | XXX | 
-| [True OR FALSE?](Utilities/Operator/Boolean_Operator.py) | XXX | [Class](Utilities/Class) | XXX | 
+| [True OR FALSE?](Utilities/Operator/Boolean_Operator.py) | [Combinatorics](Utilities/Python_Combinatorics.ipynb) | [Class](Utilities/Class) | XXX | 
 
 
