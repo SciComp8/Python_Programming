@@ -11,7 +11,7 @@ Presenting a curated compilation of Python codes inspired from *Python Programmi
 | [Manage Data Through Pandas](Utilities/pandas) | [Generator](Utilities/Generator.py) | [Dictionary](Utilities/Dictionary) | XXX | 
 | [Use and Tailor Functions](Utilities/Function) | [Enumerate](Utilities/Tuple/Enumerate_Position.py) | [Tuple](Utilities/Tuple) | XXX | 
 | [Flow Control](Utilities/Flow_Control) | [Walrus operator](Utilities/Operator/:=.py) | [NumpyArray](Utilities/NumPy) | XXX | 
-| [Arithmetic Calculations](Utilities/Math/Number) | XXX | [Set](Utilities/Set) | XXX | 
+| [Arithmetic Calculations](Utilities/Math/Number) | [Symbolic Calculations])(Utilities/Symbolic_Computation.py) | [Set](Utilities/Set) | XXX | 
 | [True OR FALSE?](Utilities/Operator/Boolean_Operator.py) | XXX | [Class](Utilities/Class) | XXX | 
 
 
