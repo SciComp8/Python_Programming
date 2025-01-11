@@ -1,7 +1,7 @@
 ## References:
 # https://github.com/ScienceComputing/Python_Programming/blob/68201ab5a7ec56c128425f736fd34298c1258548/Utilities/List/*List_Comprehension.py#L87
 # Boolean variables can either be True or False
-# https://en.wikipedia.org/wiki/De_Morgan%27s_laws 
+# ! https://en.wikipedia.org/wiki/De_Morgan%27s_laws 
 # https://en.wikipedia.org/wiki/Blackjack
 
 bool(0) # False
@@ -57,6 +57,7 @@ to_smash(1)
 
 def prepared_for_weather(have_umbrella, rain_level, have_hood, is_workday):
     return have_umbrella or rain_level < 5 and have_hood or not rain_level > 0 and is_workday # not (rain_level > 0 and is_workday)
+# Apply De Morgan's laws: not (rain_level > 0 and is_workday)  => (rain_level <= 0 or not is_workday)
 
 # The function returns False (but should have returned True)
 have_umbrella = False
