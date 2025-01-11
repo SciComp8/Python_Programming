@@ -1,5 +1,7 @@
 # Enumeration is used in loops to return the position and the data in that position while looping
 # Enumeration in deep learning: https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/AI_Medicine/Recurrent_Neural_Network.ipynb
+
+
 list1 = ['cake1', 'cake2', 'cake3']
 list2 = ['Vanilla Cake', 'Red Velvet Cake', 'Black Forest Cake']
 full_list = list(zip(list1, list2))
