@@ -20,3 +20,8 @@ print("Is a 200 bp fragment suitable for ATAC-Seq?", is_suitable_for_atac_seq(20
 '9' == 9 # False
 
 # Comparison operators combined with arithmetic operators 
+def is_even(n):
+    return (n % 2) == 0
+
+print("Is 60 even?", is_even(60))
+print("Is 9 even?", is_even(9))
