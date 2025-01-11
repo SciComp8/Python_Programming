@@ -9,7 +9,16 @@ scRNA_seq_metadata = [
 for row in scRNA_seq_metadata:
     print(row)
 
+# Locate the first element
+scRNA_seq_metadata[0]
 
+# Locate the last element
+scRNA_seq_metadata[-1]
+
+# Locate the penultimate 倒数第二的 element
+scRNA_seq_metadata[-2]
+
+# Locate the row position of a particular data entry
 position = scRNA_seq_metadata.index(["cell_004", "sample_B", "NK-cell", "healthy", "none", "batch_2", 1400, 950, 2.8])
 
 # Remove an element in a specific position and save the removed element
@@ -22,11 +31,3 @@ for row in scRNA_seq_metadata:
 # ['cell_002', 'sample_A', 'B-cell', 'disease', 'drug_X', 'batch_1', 1500, 1000, 3.1]
 # ['cell_003', 'sample_B', 'Monocyte', 'disease', 'drug_Y', 'batch_2', 1800, 1100, 4.0]
 
-# Locate the first element
-scRNA_seq_metadata[0]
-
-# Locate the last element
-scRNA_seq_metadata[-1]
-
-# Locate the penultimate 倒数第二的 element
-scRNA_seq_metadata[-2]
