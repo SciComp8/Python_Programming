@@ -64,3 +64,11 @@ def classify_temperature(temp):
 classify_temperature(6)
 classify_temperature(0)
 
+# Convert things to boolean values
+print(bool(90)) # True
+print(bool(0)) # False
+print(bool("congress")) # True
+print(bool("")) # False
+print(bool(())) # False
+print(bool([])) # False
+print(bool({})) # False
