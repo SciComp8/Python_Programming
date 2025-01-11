@@ -16,7 +16,7 @@ print("Is a 100 bp fragment suitable for ATAC-Seq?", is_suitable_for_atac_seq(10
 print("Is a 200 bp fragment suitable for ATAC-Seq?", is_suitable_for_atac_seq(200)) # True
 
 # Comparisons
-3.0 == 3 # True
-'3' == 3 # False
+9.0 == 9 # True
+'9' == 9 # False
 
 # Comparison operators combined with arithmetic operators 
