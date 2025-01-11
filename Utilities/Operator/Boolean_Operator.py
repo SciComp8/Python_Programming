@@ -1,5 +1,5 @@
 # Boolean variables can either be True or False
-# Boolean examples in Kaggle: https://github.com/SciComp8/Python_Programming/blob/main/KagglePython/Booleans_Conditionals.py
+# Boolean examples in Kaggle: https://github.com/SciComp8/Python_Programming/blob/main/Kaggle/Learn_Python/Booleans_Conditionals.py
 # Operator precedence: https://docs.python.org/3/reference/expressions.html#operator-precedence
 
 
