@@ -40,3 +40,27 @@ def is_ok_for_atac_seq2(fragment_length):
 print("Is a 30 bp fragment suitable for ATAC-Seq?", is_ok_for_atac_seq2(30)) # False
 print("Is a 100 bp fragment suitable for ATAC-Seq?", is_ok_for_atac_seq2(100)) # True
 print("Is a 200 bp fragment suitable for ATAC-Seq?", is_ok_for_atac_seq2(200)) # True
+
+
+prepared_for_cyberattack = has_firewall or (attack_risk_level < 5 and has_intrusion_detection) or not (attack_risk_level > 0 and is_business_hours)
+prepared_for_cyberattack = (
+    has_firewall
+    or ((attack_risk_level < 5) and has_intrusion_detection))
+    or (not ((attack_risk_level > 0) and is_business_hours))
+)
+
+# Combine boolean operators and conditional statements
+# elif and else blocks are optional
+def classify_temperature(temp):
+    if temp == 0:
+        print(temp, "degrees is freezing point.")
+    elif temp > 0:
+        print(temp, "degrees is above freezing.")
+    elif temp < 0:
+        print(temp, "degrees is below freezing.")
+    else:
+        print(temp, "is unlike any temperature I've ever measured...")
+
+classify_temperature(6)
+classify_temperature(0)
+
