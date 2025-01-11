@@ -27,7 +27,7 @@ print("Is 60 even?", is_even(60))
 print("Is 9 even?", is_even(9))
 
 # Combine boolean values
-def is_ok_for_atac_seq(fragment_length):
+def is_ok_for_atac_seq2(fragment_length):
     """
     Is the given fragment length suitable for ATAC-Seq analysis?
     ATAC-Seq typically uses fragments between 50 and 150 bp.
@@ -35,6 +35,6 @@ def is_ok_for_atac_seq(fragment_length):
     """
     return 50 <= fragment_length <= 150 and fragment_length % 2 == 0
 
-print("Is a 30 bp fragment suitable for ATAC-Seq?", is_ok_for_atac_seq(30)) # False
-print("Is a 100 bp fragment suitable for ATAC-Seq?", is_ok_for_atac_seq(100)) # True
-print("Is a 200 bp fragment suitable for ATAC-Seq?", is_ok_for_atac_seq(200)) # True
+print("Is a 30 bp fragment suitable for ATAC-Seq?", is_ok_for_atac_seq2(30)) # False
+print("Is a 100 bp fragment suitable for ATAC-Seq?", is_ok_for_atac_seq2(100)) # True
+print("Is a 200 bp fragment suitable for ATAC-Seq?", is_ok_for_atac_seq2(200)) # True
