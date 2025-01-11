@@ -1,4 +1,5 @@
 # Unpack lists
+# A list can contain a mix of different types of variables
 data = [ 'XYZ', 90, 71.1, (2023, 12, 21) ] 
 _, shares, price, _ = data
 shares
