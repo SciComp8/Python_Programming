@@ -1,5 +1,5 @@
 ## References:
-# https://github.com/ScienceComputing/Python_Programming/blob/68201ab5a7ec56c128425f736fd34298c1258548/Utilities/List/*List_Comprehension.py#L87
+# https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/List/*List_Comprehension.py#L87
 # Boolean variables can either be True or False
 # ! https://en.wikipedia.org/wiki/De_Morgan%27s_laws 
 # https://en.wikipedia.org/wiki/Blackjack
