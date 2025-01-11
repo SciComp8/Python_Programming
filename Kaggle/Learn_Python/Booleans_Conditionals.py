@@ -1,4 +1,6 @@
-# Ref: https://www.kaggle.com/code/colinmorris/booleans-and-conditionals
+# References
+# https://www.kaggle.com/code/colinmorris/booleans-and-conditionals
+# https://github.com/SciComp8/Python_Programming/blob/main/Kaggle/Learn_Python/Exercise_Booleans_Conditionals.py#L58
 var = True
 print(var) # True
 print(type(var)) # <class 'bool'>
