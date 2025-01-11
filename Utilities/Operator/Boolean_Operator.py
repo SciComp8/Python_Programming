@@ -1,4 +1,7 @@
 # Boolean variables can either be True or False
+# Boolean examples in Kaggle: https://github.com/SciComp8/Python_Programming/blob/main/KagglePython/Booleans_Conditionals.py
+
+
 out_of_donut = True
 if out_of_donut:
     print("Please run to the supermarket NOW!")
