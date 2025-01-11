@@ -1,4 +1,4 @@
-# Python Computing Compendium 
+# Python Computing Compendium | Do It Yourself!
 
 *Last updated: 10 Jan 2025*
 
