@@ -12,6 +12,6 @@ Presenting a curated compilation of Python codes inspired from *Python Programmi
 | [Use and Tailor Functions](Utilities/Function) | [Enumerate](Utilities/Tuple/Enumerate_Position.py) | [Tuple](Utilities/Tuple) | [Decision Tree, K-Nearest Neighborhood, Grid Search](Artificial_Intelligence/AI_Medicine/Programing_Assignment1.ipynb) | 
 | [Flow Control](Utilities/Flow_Control) | [Walrus operator](Utilities/Operator/:=.py) | [NumpyArray](Utilities/NumPy) | XXX | 
 | [Arithmetic Calculations](Utilities/Math/Number) | [Symbolic Calculations](Utilities/Symbolic_Computation.py) | [Set](Utilities/Set) | XXX | 
-| [True Or False](Utilities/Operator/Boolean_Operator.py) | [Combinatorics](Utilities/Python_Combinatorics.ipynb) | [Class](Utilities/Class) | XXX | 
+| [True Or False](Utilities/Operator/Boolean_Operator.py) | [Combinatorics](Utilities/Python_Combinatorics.ipynb) | [Class](Utilities/Class) | [PyTorch](Artificial_Intelligence/PyTorch) | 
 
 
