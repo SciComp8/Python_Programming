@@ -11,7 +11,7 @@ Presenting a curated compilation of Python codes inspired from *Python Programmi
 | [Manage Data Through Pandas](Utilities/pandas) | [Generator](Utilities/Generator.py) | [Dictionary](Utilities/Dictionary) | [Autoencoder](Artificial_Intelligence/AI_Medicine/Autoencoder) | 
 | [Use and Tailor Functions](Utilities/Function) | [Enumerate](Utilities/Tuple/Enumerate_Position.py) | [Tuple](Utilities/Tuple) | [Decision Tree with Grid Search](Artificial_Intelligence/Machine_Learning/Decision_Tree_Mortality.ipynb) | 
 | [Flow Control](Utilities/Flow_Control) | [Walrus operator](Utilities/Operator/:=.py) | [NumpyArray](Utilities/NumPy) | [K-Nearest Neighborhood with Grid Search](Artificial_Intelligence/AI_Medicine/Programing_Assignment1.ipynb) | 
-| [Arithmetic Calculations](Utilities/Math/Number) | [Symbolic Calculations](Utilities/Symbolic_Computation.py) | [Set](Utilities/Set) | XXX | 
+| [Arithmetic Calculations](Utilities/Math/Number) | [Symbolic Calculations](Utilities/Symbolic_Computation.py) | [Set](Utilities/Set) | [Logistic Regression with Grid Search](Artificial_Intelligence/Machine_Learning/Logistic_Regression_Mortality.ipynb) | 
 | [True Or False](Utilities/Operator/Boolean_Operator.py) | [Combinatorics](Utilities/Python_Combinatorics.ipynb) | [Class](Utilities/Class) | [PyTorch](Artificial_Intelligence/PyTorch) | 
 
 
