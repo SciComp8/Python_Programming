@@ -8,3 +8,8 @@ city[0:2] = ['Tokyo', 'Chicago']
 
 # View the length of list
 len(city)
+
+# Perform arithmetic operations on the list elements
+numbers = [1, 2, 5, 0, 2, 9, 10]
+sum(numbers)
+max(numbers)
