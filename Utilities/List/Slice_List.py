@@ -9,3 +9,19 @@ social_science_data = [
 
 for row in social_science_data:
     print(row)
+
+# Return the elements of social science records starting from index 0 and continuing up to but *not including index 2*
+social_science_data[0:2]
+social_science_data[:2]
+
+# Return all the social science records from index 2 onward
+social_science_data[2:]
+
+# Return all the social science records except the first and the last
+social_science_data[1:-1]
+
+# Return the last 3 social science records 
+social_science_data[-3:]
+
+# Return the last 2 social science records 
+social_science_data[-2:]
