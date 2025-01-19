@@ -2,3 +2,5 @@
 city = ['Tokyo', 'Shanghai', 'New York City', 'Los Angeles', 'Paris', 'London']
 
 sorted_city = sorted(city)
+print(sorted_city)
+# ['London', 'Los Angeles', 'New York City', 'Paris', 'Shanghai', 'Tokyo']
