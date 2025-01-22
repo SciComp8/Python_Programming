@@ -1,5 +1,11 @@
 pd.read_csv()
+
 pd.read_excel()
+file_path = '/Users/xyz/data/'
+file_name = 'METADATA.xlsx'
+df_meta = pd.read_excel(file_path + file_name, sheet_name='combined')
+df_meta.head()
+
 pd.read_json()
 pd.read_clipboard()
 
