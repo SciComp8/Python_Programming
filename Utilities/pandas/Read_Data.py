@@ -1,4 +1,7 @@
 pd.read_csv()
+file_name = 'CONNECTOME_MATRICES.csv'
+con_mat = pd.read_csv(file_path + file_name)
+con_mat.head()
 
 pd.read_excel()
 file_path = '/Users/xyz/data/'
