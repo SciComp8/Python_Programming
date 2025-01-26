@@ -24,8 +24,9 @@ print(my_df)
 
 """
 Create DataFrames from a dictionary
-out_df = pd.DataFrame({'col_name_1': test_data.var_name_1, 'col_name_2': test_data.var_name_2})
 """
+out_df = pd.DataFrame({'col_name_1': test_data.var_name_1, 'col_name_2': test_data.var_name_2})
+
 
 """
 Horizontally concatenate a new DataFrame to the old DataFrame
@@ -41,4 +42,4 @@ print(df)
 df["new_col"] = df["col_1"] / df["col_2"] * 1000
 print(df)
 
-df.to_csv("new_data.csv")
+df.to_csv("new_data.csv", index=FALSE)
