@@ -52,11 +52,8 @@ def read_large_file(file_object):
 # Open a connection to a target file using a context manager 'with' statement, ensuring that resources are efficiently allocated when opening a connection to a file.
 with open('large_data.csv') as file:
     
-    # Skip the column names
-    file.readline()
-
-    # Initialize an empty dictionary: counts_dict
-    counts_dict = {}
+    file.readline() # Initialize an empty dictionary: counts_dict
+    counts_dict = {} # Initialize an empty dictionary: counts_dict
 
     # Process only the first 500 rows
     for j in range(0,500):
@@ -82,9 +79,8 @@ counts_dict = {}
 
 # Open a connection to the file
 with open('large_data.csv') as file:
-
-    # Iterate over the generator from read_large_file()
-    for line in read_large_file(file):
+    
+    for line in read_large_file(file): # Iterate over the generator from read_large_file()
 
         row = line.split(',')
         first_col = row[0]
@@ -93,8 +89,7 @@ with open('large_data.csv') as file:
             counts_dict[first_col] += 1
         else:
             counts_dict[first_col] = 1
-
-# Print            
+        
 print(counts_dict)
 
 # Case 2: bioinformatics scenarior: parse a very large genomic data file
