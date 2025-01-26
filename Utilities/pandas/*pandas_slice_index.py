@@ -29,8 +29,8 @@ df.reset_index()
 df.reset_index(drop=True)
 
 """
-Locate rows using the index name locator "loc" versus the index number locator "iloc
-""""
+Locate rows using the index name locator "loc" versus the index number locator "iloc"
+"""
 # When the selected row numbers are small, use iloc, otherwise, use loc
 # Select the first 100 rows
 import time
@@ -74,7 +74,7 @@ Randomly select rows
 df.sample(int(0.8 * df.shape[0]), axis=0, replace = True)
 
 """
-Slicing and subsetting based on one/multiple columns
+Select rows based on value(s) of one/multiple columns
 """
 df["column_name_1"] > 50 # subset rows and return a logical column
 df[df["column_name_1"] > 50] # subset rows and return a subsetted data frame
@@ -88,7 +88,7 @@ is_lab_or_lab2 = df["column_name_1"].isin(["labrador", "labrador"])
 df[is_lab_or_lab2] # subset rows based on multiple values of a categorical variable
 
 """
-Slicing and subsetting based on one/multiple columns using the index name locator - loc
+Select rows based on value(s) of one/multiple columns using the index name locator - loc
 """
 # Subset the rows based on the particular values of a column
 # Approach 1: a cumbersome way to select eligible rows
@@ -127,7 +127,7 @@ df[(df["date"] >= "2010-09-02") & (df["date"] <= "2012-09-02")]
 df.loc[("val_1_for_col_1", "val_1_for_col_2"):("val_3_for_col_1", "val_3_for_col_2")] # Subset the outer index level that meet val_1_for_col_1, val_2_for_col_1, val_3_for_col_1, and then subset the inner index level that meet val_1_for_col_2, val_2_for_col_2, val_3_for_col_2
 
 """
-Slice columns using the index name locator "loc" versus the index number locator "iloc
+Select columns using the index name locator "loc" versus the index number locator "iloc
 """"
 # The speeds across loc, iloc, and [[]] are similar; may choose [[]] for convenient typing
 
@@ -160,8 +160,14 @@ Randomly select columns
 # DataFrame.sample(n=None, frac=None, replace=False, weights=None, random_state=None, axis=None, ignore_index=False)
 df.sample(int(0.8 * df.shape[1]), axis=1, replace=False)
 
-# Slice rows and columns at the same time
+
+"""
+! Slice rows and columns at the same time
+"""
 df.loc[("val_1_for_col_1", "val_1_for_col_2", "val_1_for_col_3"):("val_3_for_col_1", "val_3_for_col_2", "val_3_for_col_3"), "col_name_1":"col_name_3"] 
+
+df.loc[df.Var_1 == 'value']['Col_name']
+test_data.loc[test_data.UMR == 'Yes']['Outcome']
 
 # Slicing and subsetting using iloc method, similar to slicing lists
 # Slice lists
