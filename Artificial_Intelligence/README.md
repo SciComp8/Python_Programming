@@ -1,5 +1,8 @@
 
 # Useful AI computing procedures
+## 
+- [List files in the training and test folders](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/Generator.py#L122)
+
 ## Dataframe manipulation
 
 - [Slice and index a dataframe](https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/pandas/*pandas_slice_index.py)
