@@ -1,13 +1,21 @@
-# List comprehension [] returns a list; while the generator () returns a generator object
-# Both can be iterated over
-[2 * num for num in range(5)]
-(2 * num for num in range(5)) # Create a generator
+# Generator () returns a generator object
+(2 * num for num in range(5)) 
 
+# List comprehension [] returns a list
+[2 * num for num in range(5)]
+
+# Both can be iterated over
 num_gen = (2 * num for num in range(5))
 for num in num_gen:
     print(num)  
 
-print(list(num_gen)) # Convert a generator to a list
+num_gen = [2 * num for num in range(5)]
+for num in num_gen:
+    print(num)  
+
+# Convert a generator to a list
+num_gen = (2 * num for num in range(5))
+print(list(num_gen)) 
 
 # Calculate the length of each string element
 person_list = ['John', 'Katie', 'Angel', 'Julia', 'Peter']
@@ -15,89 +23,31 @@ lengths = (len(person) for person in person_list)
 for value in lengths:
     print(value)
 
-# Lazy evaluation whereby the evaluation of the expression is delayed until its value is needed.
-# We prefer the generator when working with extremely large sequences, as we don't want to store the entire list in memory, which is what comprehensions would do. We want to generate elements of the sequence on the fly.
+
+# When we prefer generator over list comprehension?
+# We prefer the generator when working with *extremely large sequences, 
+# as we don't want to store the entire list *in memory, which is what list comprehension would do. 
+# We want to generate elements of the sequence on the fly.
+(2 * num for num in range(2 ** 10000000000)] # Prefer
 print(next(num_gen))
 print(next(num_gen))
 print(next(num_gen))
 
-[2 * num for num in range(2 ** 10000000000)]
-(2 * num for num in range(2 ** 10000000000)]
+[2 * num for num in range(2 ** 10000000000)] 
 
- # Conditionals in the generator
-aa = ['histidine', 'isoleucine', 'leucine', 'lysine', 'methionine', 'phenylalanine', 'threonine', 'tryptophan', 'valine']
-aa_target = (x for x in aa if "t" in x)
-print(list(aa_target))
-
-# Build the generator function that produces the generator objects when called. 
-# This function yields a sequence of values instead of returning a single value, using the keyword `yield`.
-"""
-Case 1
-"""
-def yield_gene_expression():
-    genes = ["Gene1", "Gene2", "Gene3", "Gene4", "Gene5"]
-    values = [10.5, 15.2, 8.7, 12.0, 9.8]  
-    for gene, value in zip(genes, values):
-        yield f"Gene: {gene}, Expression: {value} TPM"
-
-gene_expression_generator = yield_gene_expression()
-
-print(next(gene_expression_generator))
-print(next(gene_expression_generator))
-print(next(gene_expression_generator))
-print(next(gene_expression_generator))
-print(next(gene_expression_generator))
-# Gene: Gene5, Expression: 9.8 TPM
-
-"""
-Case 2
-"""
-def num_sequence(n):
-    """Generate values from 0 to n."""
-    i = 0
-    while i < n:
-        yield i
-        i += 1
-
-result = num_sequence(7)
-print(type(result)) # <class 'generator'>
-for item in result:
-    print(item)
-
-"""
-Case 3
-"""
-person_list = ['John', 'Katie', 'Angel', 'Julia', 'Peter']
-# Define generator function get_lengths that allows users to input any list
-def get_lengths(input_list):
-    """Generator function that yields the length of the strings in input_list."""
-    for person in input_list:
-        yield len(person)
-
-for value in get_lengths(person_list):
-    print(value)
-
-# Generators can be used to load a very large (streaming) data file line by line
-
+# Use generators load a very large (streaming) data file line by line
 # Case 1: process the first 500 rows of a file line by line, to create a dictionary of the counts of how many times each country appears in a column in the dataset.
 counts_dict = {}
 
 # Define read_large_file()
 def read_large_file(file_object):
     """A generator function to read a large file line by line on the fly."""
-
-    # Loop indefinitely until the end of the file
-    while True:
-
-        # Read a line from the file: data
-        data = file_object.readline()
-
-        # Break if this is the end of the file
-        if not data:
+    
+    while True: # Loop indefinitely until the end of the file
+        data = file_object.readline() # Read a line from the file: data
+        if not data: # Break if this is the end of the file
             break
-
-        # Yield the line of data
-        yield data
+        yield data # Yield the line of data
 
 # Open a connection to a target file using a context manager 'with' statement, ensuring that resources are efficiently allocated when opening a connection to a file.
 with open('large_data.csv') as file:
@@ -172,3 +122,74 @@ try:
         print("Processing sequence:", sequence[:20], "...")
 except StopIteration:
     print("Finished processing all sequences.")
+
+
+# Generators in printing the file paths
+# os.walk() yields a 3-tuple including dirpath, dirnames, filenames.
+# _: capture the dirnames, but ignore them.
+import os
+for root, dirs, files in os.walk("./data/raw/"): 
+   for dir in dirs:
+      print(os.path.join(root, dir))
+   for file in files:
+      print(os.path.join(root, file))
+
+for root, _, files in os.walk("./data/raw/"): 
+   for file in files:
+      print(os.path.join(root, file))
+
+# Conditionals in the generator
+aa = ['histidine', 'isoleucine', 'leucine', 'lysine', 'methionine', 'phenylalanine', 'threonine', 'tryptophan', 'valine']
+aa_target = (x for x in aa if "t" in x)
+print(list(aa_target))
+
+
+# Build the generator function that produces the generator objects when called. 
+# This function yields a sequence of values instead of returning a single value, using the keyword `yield`.
+"""
+Case 1
+"""
+def yield_gene_expression():
+    genes = ["Gene1", "Gene2", "Gene3", "Gene4", "Gene5"]
+    values = [10.5, 15.2, 8.7, 12.0, 9.8]  
+    for gene, value in zip(genes, values):
+        yield f"Gene: {gene}, Expression: {value} TPM"
+
+gene_expression_generator = yield_gene_expression()
+
+print(next(gene_expression_generator))
+print(next(gene_expression_generator))
+print(next(gene_expression_generator))
+print(next(gene_expression_generator))
+print(next(gene_expression_generator))
+# Gene: Gene5, Expression: 9.8 TPM
+
+"""
+Case 2
+"""
+def num_sequence(n):
+    """Generate values from 0 to n."""
+    i = 0
+    while i < n:
+        yield i
+        i += 1
+
+result = num_sequence(7)
+print(type(result)) # <class 'generator'>
+for item in result:
+    print(item)
+
+"""
+Case 3
+"""
+person_list = ['John', 'Katie', 'Angel', 'Julia', 'Peter']
+# Define generator function get_lengths that allows users to input any list
+def get_lengths(input_list):
+    """Generator function that yields the length of the strings in input_list."""
+    for person in input_list:
+        yield len(person)
+
+for value in get_lengths(person_list):
+    print(value)
+
+
