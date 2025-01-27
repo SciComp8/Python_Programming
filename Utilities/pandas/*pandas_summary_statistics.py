@@ -59,6 +59,9 @@ df["column_name_1"].transform(miss_median)
 miss_mean = lambda x: x.fillna(x.mean())
 df["column_name_1"].transform(miss_mean)
 
+# Drop missing values
+df_clean = df.dropna(axis=0)
+
 # Drop the records with the duplicate values on variables
 df.drop_duplicates(subset=["column_name_1", "column_name_2"])
 
