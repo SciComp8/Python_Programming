@@ -6,6 +6,7 @@
 
 ## Dataframe manipulation
 - [Slice and index a dataframe](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/pandas/*pandas_slice_index.py#L169)
+  - [Select features](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/pandas/*pandas_slice_index.py#L130)
 - [Split data into training and validation sets by randomly selecting rows](https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/pandas/*pandas_slice_index.py)
 
 ## Feature engineering
