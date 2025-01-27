@@ -1,6 +1,9 @@
 # Compute built-in summary statistics
 df["column_name_1"].mean()
+df.var_1.mean()
 df[df["column_name_1"] == "group1"]["column_name_2"].mean() # Calculate the mean of a variable (column_name_2) by the specific group (group1)
+df[df.var_1 == 'value']['var_2'].mean()
+
 df["column_name_1"].median()
 df["column_name_1"].mode()
 df["column_name_1"].min()
