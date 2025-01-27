@@ -127,8 +127,14 @@ df[(df["date"] >= "2010-09-02") & (df["date"] <= "2012-09-02")]
 df.loc[("val_1_for_col_1", "val_1_for_col_2"):("val_3_for_col_1", "val_3_for_col_2")] # Subset the outer index level that meet val_1_for_col_1, val_2_for_col_1, val_3_for_col_1, and then subset the inner index level that meet val_1_for_col_2, val_2_for_col_2, val_3_for_col_2
 
 """
+Select columns
+"""
+features = ['col_name_1', 'col_name_2', 'col_name_3']
+X = train_data[features]
+
+"""
 Select columns using the index name locator "loc" versus the index number locator "iloc
-""""
+"""
 # The speeds across loc, iloc, and [[]] are similar; may choose [[]] for convenient typing
 
 df.loc[:, "col_name_1":"col_name_3"] # Select columns beginning from col_name_1 to col_name_3, and keep all rows
