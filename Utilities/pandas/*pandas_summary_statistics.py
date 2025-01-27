@@ -1,4 +1,9 @@
 # Compute built-in summary statistics
+# Check data with these statistics is important in a data science project. 
+# We may spot something in the dataset that needs further inspection.
+df.head()
+df.describe()
+
 # Estimate the mean
 df["column_name_1"].mean()
 df.var_1.mean() # Pull out a variable using dot-notation
