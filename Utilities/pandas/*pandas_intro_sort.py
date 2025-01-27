@@ -1,3 +1,7 @@
+import pandas as pd
+df_path = '../data/raw/df.csv'
+df = pd.read_csv(df_path)
+
 df.head()
 
 df.col_name.sample(n=6)
@@ -30,7 +34,8 @@ df.shape # shape is an attribute, not a method; so there is no parenthesis
 
 df.values # values attribute extracts the data values in 2-D numpy array
 
-df.columns # columns attribute extracts the column names
+df.columns #! columns attribute extracts the column names
+# Index(['var_name_1', 'var_name_2', 'var_name_3'], dtype='object')
 
 df.columns = new_column # assign new column names
 
