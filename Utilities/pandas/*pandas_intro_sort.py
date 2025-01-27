@@ -21,6 +21,9 @@ df.info()
 # memory usage: 1.3+ MB
 
 df.describe() # descriptive statistics
+# count: how many rows have non-missing values
+# mean: average
+# std, standard deviation: how values are numerically spread out
 
 df.shape # shape is an attribute, not a method; so there is no parenthesis 
 
