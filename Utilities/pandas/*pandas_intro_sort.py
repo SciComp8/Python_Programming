@@ -24,6 +24,7 @@ df.describe() # descriptive statistics
 # count: how many rows have non-missing values
 # mean: average
 # std, standard deviation: how values are numerically spread out
+# 25%/50%/75%: the smallest number that is bigger than 25%/50%/75% of the values
 
 df.shape # shape is an attribute, not a method; so there is no parenthesis 
 
