@@ -22,16 +22,16 @@ print(X.head())
 # 3: Split data into training and validation data
 train_X, val_X, train_y, val_y = train_test_split(X, y, random_state=9)
 
-# 4: specify and fit model
+# 4: Specify the model and fit the model with training data
 sale_model = DecisionTreeRegressor(random_state=9)
 sale_model.fit(X, y)
 
-# 5: make predictions
+# 5: Make predictions
 val_predictions = sale_model.predict(val_X)
-print(val_y.head())
+print(val_y.head().tolist())
 print(val_predictions[0:5])
 
-# 5: evaluate model
+# 5: Evaluate the model
 print(mean_absolute_error(val_y, val_predictions))
 
 
