@@ -42,8 +42,13 @@ print(val_predictions[0:5])
 print(mean_absolute_error(val_y, val_predictions))
 
 # 7: Compare different max_leave_nodes
-max_leaf_nodes_test = [5, 25, 50, 100, 250, 500]
+max_leaf_nodes_test = [2**1, 2**2, 2**3, 2**4, 2**5]
 for max_leaf_nodes in max_leaf_nodes_test:
     mae_test = get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y)
     print("Max leaf nodes: %d  \t\t Mean Absolute Error:  %d" %(max_leaf_nodes, mae_test))
 
+best_max_leaf_nodes = 2**3
+
+# 8: Fit the model with the best argument and all data
+best_model = DecisionTreeRegressor(max_leaf_nodes=best_max_leaf_nodes, random_state=9)
+best_model.fit(X, y)
