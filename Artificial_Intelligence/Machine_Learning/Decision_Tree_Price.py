@@ -36,7 +36,7 @@ val_predictions = sale_model.predict(val_X)
 print(val_y.head().tolist())
 print(val_predictions[0:5])
 
-# 5: Evaluate the model
+# 6: Evaluate the model
 print(mean_absolute_error(val_y, val_predictions))
 
 
