@@ -1,6 +1,6 @@
 # Reference: https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html
 # tree's depth: how many splits a tree makes; greater depth, more overfitting
-# max_leaf_nodes: more leaf nodes, more overfitting
+# max_leaf_nodes: maximum number of leaf nodes (terminal nodes) that the tree can have; more leaf nodes, more overfitting
 
 # Set up coding environment
 import pandas as pd
