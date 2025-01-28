@@ -1,3 +1,7 @@
+# Mean absolute error: average of the absolute values of actual−predicted = on average, our predictions are off by about X.
+from sklearn.metrics import mean_absolute_error
+mean_absolute_error(true_y, predicted_y)
+
 # Sensitivity
 def sensitivity(true_positives, false_negatives):
     """
