@@ -1,4 +1,6 @@
 # Reference: https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html
+# tree's depth: how many splits a tree makes
+
 # Set up coding environment
 import pandas as pd
 from sklearn.tree import DecisionTreeRegressor
