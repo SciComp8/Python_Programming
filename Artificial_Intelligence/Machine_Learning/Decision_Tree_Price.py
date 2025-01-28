@@ -2,6 +2,7 @@
 import pandas as pd
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_absolute_error
 
 file_path = '../raw/sale_data/train.csv'
 
