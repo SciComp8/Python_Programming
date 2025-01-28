@@ -21,3 +21,5 @@
 ## Build a model: define -- fit -- predict -- evaluate
 - [Train a decision tree regressor](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Decision_Tree_Price.py)
 - [Train a decision tree classifier](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Decision_Tree_Mortality.ipynb)
+
+## Fine-tune a model
