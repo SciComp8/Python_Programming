@@ -3,6 +3,8 @@ df_path = '../data/raw/df.csv'
 df = pd.read_csv(df_path)
 
 df.head()
+df.col_name.head()
+df.col_name.head().tolist()
 
 df.col_name.sample(n=6)
 
