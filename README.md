@@ -1,6 +1,6 @@
 # Python Computing Compendium | Do It Yourself!
 
-*Last updated: 27 Jan 2025*
+*Last updated: 28 Jan 2025*
 
 Presenting a curated compilation of Python codes inspired from *Python Programming*, *AI in Medicine*, *Data Science*, *Bioinformatics Algorithm*, and *Computer Science with Python*. This repository houses Python's real-world applications across varied scientific computing domains. 
 
