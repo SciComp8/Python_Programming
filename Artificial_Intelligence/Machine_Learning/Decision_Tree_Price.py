@@ -31,7 +31,7 @@ train_X, val_X, train_y, val_y = train_test_split(X, y, random_state=9)
 
 # 4: Specify the model and fit the model with training data
 sale_model = DecisionTreeRegressor(random_state=9)
-sale_model.fit(X, y)
+sale_model.fit(train_X, train_y)
 
 # 5: Make predictions
 val_predictions = sale_model.predict(val_X)
