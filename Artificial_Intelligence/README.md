@@ -3,6 +3,7 @@
 
 ## Environment setup
 - [List files in the training and test folders](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/Generator.py#L122)
+- [Create symbolic links that allow us to access the file from another location without duplicating it](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/File/Create_SymbolicLink.py)
 
 ## Dataframe manipulation
 - [Slice and index a dataframe](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/pandas/*pandas_slice_index.py#L169)
