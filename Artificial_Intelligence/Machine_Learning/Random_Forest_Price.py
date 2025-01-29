@@ -34,9 +34,18 @@ sale_model_rf = RandomForestRegressor(random_state=9)
 sale_model_rf.fit(train_X, train_y)
 
 # 5: Make predictions
-val_predictions = sale_model_rf.predict(val_X)
+val_preds = sale_model_rf.predict(val_X)
 print(val_y.head().tolist())
-print(val_predictions[0:5])
+print(val_preds[0:5])
 
 # 6: Evaluate the model
-print(mean_absolute_error(val_y, val_predictions))
+print(mean_absolute_error(val_y, val_preds))
+
+# 7: Submit predictions using the test data
+file_path = '../raw/sale_data/test.csv'
+test_data = pd.read_csv(file_path)
+test_X = test_data[features]
+test_preds = sale_model_rf.predict(test_X)
+
+submit_preds = pd.DataFrame({'Id': test_data.Id, 'Price': test_preds})
+submit_preds.to_csv('submit_preds.csv', index=False)
