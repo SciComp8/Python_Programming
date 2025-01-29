@@ -9,8 +9,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
 
 file_path = '../raw/sale_data/train.csv'
-
 sale_data = pd.read_csv(file_path)
+
+# 0: drop rows with missing values
+sale_data = sale_data.dropna(axis=0)
 
 # 1: Specify prediction target
 sale_data.columns
