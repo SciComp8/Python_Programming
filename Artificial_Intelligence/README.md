@@ -25,4 +25,4 @@
 - [Train a random forest regressor](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Random_Forest_Price.py)
 
 ## Fine-tune a model for better performance
-- [Evaluate the impact of different arguments on model performance](Artificial_Intelligence/Machine_Learning/Evaluate_Argument_Impact.py)
+- [Evaluate the impact of different arguments on model performance](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Evaluate_Argument_Impact.py)
