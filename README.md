@@ -13,6 +13,6 @@ Presenting a curated compilation of Python codes inspired from *Python Programmi
 | [Flow Control](Utilities/Flow_Control) | [Walrus operator](Utilities/Operator/:=.py) | [NumpyArray](Utilities/NumPy) | [K-Nearest Neighborhood with Grid Search](Artificial_Intelligence/AI_Medicine/Programing_Assignment1.ipynb) | 
 | [Arithmetic Calculations](Utilities/Math/Number) | [Symbolic Calculations](Utilities/Symbolic_Computation.py) | [Set](Utilities/Set) | [Logistic Regression with Grid Search](Artificial_Intelligence/Machine_Learning/Logistic_Regression_Mortality.ipynb) | 
 | [True Or False](Utilities/Operator/Boolean_Operator.py) | [Combinatorics](Utilities/Python_Combinatorics.ipynb) | [Class](Utilities/Class) | [PyTorch](Artificial_Intelligence/PyTorch) | 
-| [Work with Time](https://github.com/SciComp8/Python_Programming/tree/main/Utilities/Date) | | | [Common Procedure](https://github.com/SciComp8/Python_Programming/tree/main/Artificial_Intelligence)
+| [Work with Time](https://github.com/SciComp8/Python_Programming/tree/main/Utilities/Date) | [Format specifier](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/String/1_Format_String.py#L30) | | [Common Procedure](https://github.com/SciComp8/Python_Programming/tree/main/Artificial_Intelligence)
 
 
