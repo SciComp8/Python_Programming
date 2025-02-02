@@ -1,4 +1,7 @@
 # Reference: https://www.youtube.com/watch?v=2_iKR_fDKNM | NISS AI, Statistics & Data Science in Practice: Lucas Mentch - Random Forests
+# Decision trees, while simple and effective, can overfit the training data, making them less reliable for new data. 
+# Random forest addresses this by averaging the predictions of many uncorrelated decision trees, reducing the overall error and improving the model's generalizability. 
+# This ensures more stable and accurate predictions, even in complex datasets.
 # mtry defines the number of variables randomly sampled as candidates at each split
 # From the standpoint of model complexity, this parameter in random forests functions similarly to the shrinkage penalty used in explicit regularization methods such as the lasso.
 
