@@ -4,7 +4,7 @@
 
 Presenting a curated compilation of Python codes inspired from *Python Programming*, *AI in Medicine*, *Data Science*, *Bioinformatics Algorithm*, and *Computer Science with Python*. This repository houses Python's real-world applications across varied scientific computing domains. 
 
-| Python Basics | Python Advance | Data Structure | Artificial Intelligence | 
+| Python Basics | Python Advance | Data Structure | [Artificial Intelligence](https://github.com/SciComp8/Python_Programming/tree/main/Artificial_Intelligence) | 
 |----------|----------|----------|----------|
 | [Python Overview](Python_Overview.ipynb) | [Argument](Utilities/Argument.py) | [String](Utilities/String) | [Convolutional Neural Network](Artificial_Intelligence/AI_Medicine/Programing_Assignment3.ipynb) | 
 | [Learn Errors Hard](*Learn_Errors.md) | [Decorator](Utilities/Decorator.py) | [List](Utilities/List) | [Recurrent Neural Network](Artificial_Intelligence/AI_Medicine/Recurrent_Neural_Network.ipynb) | 
