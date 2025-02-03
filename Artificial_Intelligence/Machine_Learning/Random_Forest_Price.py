@@ -1,9 +1,16 @@
-# Reference: https://www.youtube.com/watch?v=2_iKR_fDKNM | NISS AI, Statistics & Data Science in Practice: Lucas Mentch - Random Forests
+# Reference: 
+# https://www.youtube.com/watch?v=2_iKR_fDKNM | NISS AI, Statistics & Data Science in Practice: Lucas Mentch - Random Forests
 # Decision trees, while simple and effective, can overfit the training data, making them less reliable for new data. 
 # Random forest addresses this by averaging the predictions of many uncorrelated decision trees, reducing the overall error and improving the model's generalizability. 
 # This ensures more stable and accurate predictions, even in complex datasets.
 # mtry defines the number of variables randomly sampled as candidates at each split
 # From the standpoint of model complexity, this parameter in random forests functions similarly to the shrinkage penalty used in explicit regularization methods such as the lasso.
+
+# https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html
+# n_estimators: no. of trees in the forest
+# criterion{“squared_error”, “absolute_error”, “friedman_mse”, “poisson”}. The function to measure the quality of a split. 
+# Supported criteria are “squared_error” for the mean squared error, which is equal to variance reduction as feature selection criterion and minimizes the L2 loss using the mean of each terminal node.
+# “absolute_error” for the mean absolute error, which minimizes the L1 loss using the median of each terminal node.
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -23,14 +30,14 @@ y = sale_data.Price
 
 # 2: Create feature sets
 feature_names = ['Area', 'Year', 'GDP', 'Population']
-X = sale_data[feature_names]
+X = sale_data[feature_names].copy()
 
 # Review data
 print(X.describe())
 print(X.head())
 
 # 3: Split data into training and validation data
-train_X, val_X, train_y, val_y = train_test_split(X, y, random_state=9)
+train_X, val_X, train_y, val_y = train_test_split(X, y, train_size=0.7, test_size=0.3, random_state=9)
 
 # 4: Specify the model and fit the model with training data
 sale_model_rf = RandomForestRegressor(random_state=9)
