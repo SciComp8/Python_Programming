@@ -20,7 +20,9 @@ y = sale_data.Price
 
 # 2: Create feature sets
 feature_names = ['Area', 'Year', 'GDP', 'Population']
-X = sale_data[feature_names]
+X = sale_data[feature_names].copy()
+# Creates a new object X with a copy of the data and indices from the original,
+# so that changes to the copied DataFrame do not affect the original, and vice versa.
 
 # Review data
 print(X.describe())
