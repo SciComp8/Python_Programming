@@ -9,7 +9,7 @@
 # https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html
 # n_estimators: no. of trees in the forest
 # criterion{“squared_error”, “absolute_error”, “friedman_mse”, “poisson”}. The function to measure the quality of a split. 
-# Supported criteria are “squared_error” for the mean squared error, which is equal to variance reduction as feature selection criterion and minimizes the L2 loss using the mean of each terminal node.
+# “squared_error” for the mean squared error, which is equal to variance reduction as feature selection criterion and minimizes the L2 loss using the mean of each terminal node.
 # “absolute_error” for the mean absolute error, which minimizes the L1 loss using the median of each terminal node.
 
 import pandas as pd
