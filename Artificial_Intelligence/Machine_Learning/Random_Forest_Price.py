@@ -11,6 +11,8 @@
 # criterion{“squared_error”, “absolute_error”, “friedman_mse”, “poisson”}. The function to measure the quality of a split. 
 # “squared_error” for the mean squared error, which is equal to variance reduction as feature selection criterion and minimizes the L2 loss using the mean of each terminal node.
 # “absolute_error” for the mean absolute error, which minimizes the L1 loss using the median of each terminal node.
+# min_samples_split: The minimum number of samples required to split an internal node.
+# max_depth: The maximum depth of the tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples.
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
