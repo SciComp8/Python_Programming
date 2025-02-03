@@ -2,6 +2,8 @@
 # tree's depth: how many splits a tree makes; greater depth, more overfitting
 # max_leaf_nodes: maximum number of leaf nodes (terminal nodes) that the tree can have; more leaf nodes, more overfitting
 
+# https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.copy.html
+
 # 0: Set up coding environment
 import pandas as pd
 from sklearn.tree import DecisionTreeRegressor
