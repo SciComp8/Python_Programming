@@ -1,6 +1,7 @@
 import pandas as pd
 df_path = '../data/raw/df.csv'
 df = pd.read_csv(df_path)
+df = pd.read_csv(df_path, index_col='fish_id')
 
 df.head()
 df.col_name.head()
