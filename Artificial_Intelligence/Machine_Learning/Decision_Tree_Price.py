@@ -27,7 +27,7 @@ print(X.describe())
 print(X.head())
 
 # 3: Split data into training and validation data
-train_X, val_X, train_y, val_y = train_test_split(X, y, random_state=9)
+train_X, val_X, train_y, val_y = train_test_split(X, y, train_size=0.7, test_size=0.3, random_state=9)
 
 # 4: Specify the model and fit the model with training data
 sale_model = DecisionTreeRegressor(random_state=9)
