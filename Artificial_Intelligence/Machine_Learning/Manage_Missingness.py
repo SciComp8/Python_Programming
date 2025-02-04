@@ -20,6 +20,7 @@ def score_miss_strategy(rf, X_t=X_train, X_v=X_valid, y_t=y_train, y_v=y_valid):
 # Method 1:
 df_clean = df.dropna(axis=1, how='any')
 # how='all': drops a column only if all values are missing
+# When there are relatively few missing entries in the column (< 20%), dropping this column may yield bad results
 
 # Method 2: 
 col_miss = [col for col in df.columns if df[col].isnull().any()]
