@@ -1,3 +1,6 @@
+# Reference:
+# https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dtypes.html
+
 # Manage missingness in columns
 # 1. Drop columns with missing values
 df_clean = df.dropna(axis=1, how='any')
