@@ -9,7 +9,7 @@ df.dtypes
 df_clean = df.select_dtypes(exclude=['object'])
 
 # Define a scoring mechanism to evaluate the impact of each missingness management strategy on model performance
-def score_miss_strategy(rf, X_t=X_train, X_v=X_valid, y_t=y_train, y_v=y_valid):
+def score_miss_strategy(X_t=X_train, X_v=X_valid, y_t=y_train, y_v=y_valid):
     rf = RandomForestRegressor(n_estimators=50, random_state=9)
     rf.fit(X_t, y_t)
     preds = rf.predict(X_v)
@@ -91,19 +91,31 @@ df_clean = df.dropna(axis=0, subset=['target_variable_name'])
 
 ### Manage missingness pipeline ###
 # Read data
-df = pd.read_csv('../data/example.csv', index_col='Student_ID')
+df_train = pd.read_csv('../data/example_train.csv', index_col='Student_ID')
+df_test = pd.read_csv('../data/example_test.csv', index_col='Student_ID')
 
 # Initial inspection on data
-df.columns
-df.shape()
-df.head()
-df.describe()
-miss_dist = df.isnull().sum()/len(df)
+df_train.columns
+df_train.shape()
+df_train.head()
+df_train.describe()
+miss_dist = df_train.isnull().sum()/len(df)
 print(miss_dist)
 
-# Systematically drop columns with any missing values
-col_miss = [col for col in df.columns if df[col].isnull().any()]
-df_clean = df.drop(col_miss, axis=1)
+# Define a scoring mechanism to evaluate the impact of each missingness management strategy on model performance
+def score_miss_strategy(X_t=X_train, X_v=X_valid, y_t=y_train, y_v=y_valid):
+    rf = RandomForestRegressor(n_estimators=50, random_state=9)
+    rf.fit(X_t, y_t)
+    preds = rf.predict(X_v)
+    return mean_absolute_error(y_v, preds)
+
+# Strategy 1: systematically drop columns with any missing values
+col_miss = [col for col in df_train.columns if df_train[col].isnull().any()]
+df_train_reduced = df_train.drop(col_miss, axis=1)
+df_test_reduced = df_test.drop(col_miss, axis=1)
+
+print("The mean absolute error after droping columns with any missing values:")
+print(score_miss_strategy(X_t=df_train_reduced, X_v=df_test_reduced, y_t=y_train, y_v=y_test))
 
 # Perform imputation and evaluate impact of different imputation strategies on model performance
 imputer_mean = SimpleImputer(strategy='mean')
