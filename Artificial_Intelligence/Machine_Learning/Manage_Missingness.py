@@ -5,6 +5,8 @@
 df.dtypes
 df_clean = df.select_dtypes(exclude=['object'])
 
+# Define a scoring mechanism to evaluate the impact of each missingness management strategy on model performance
+
 # Manage missingness in columns
 # 1. Drop columns with missing values
 df_clean = df.dropna(axis=1, how='any')
@@ -37,7 +39,6 @@ df_clean = np.array(imputer_median.transform(df), dtype=np.float32)
 imputer_mean = SimpleImputer(missing_values=np.nan, strategy='mean')
 imputer_mean.fit(df)
 df_clean = np.array(imputer_mean.transform(df), dtype=np.float32)
-
 
 # 4. Add a new column that shows the location of the imputed entries
 
