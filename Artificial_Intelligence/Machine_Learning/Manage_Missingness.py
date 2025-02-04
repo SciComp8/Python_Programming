@@ -7,6 +7,10 @@ df.dtypes
 df_clean = df.select_dtypes(exclude=['object'])
 
 # Define a scoring mechanism to evaluate the impact of each missingness management strategy on model performance
+def score_rf(rf, X_t=X_train, X_v=X_valid, y_t=y_train, y_v=y_valid):
+    rf.fit(X_t, y_t)
+    preds = rf.predict(X_v)
+    return mean_absolute_error(y_v, preds)
 
 # Manage missingness in columns
 # 1. Drop columns with missing values
