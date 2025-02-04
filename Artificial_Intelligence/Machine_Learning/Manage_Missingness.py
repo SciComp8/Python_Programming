@@ -4,8 +4,6 @@
 # https://github.com/SciComp8/Python_Programming/blob/main/Utilities/List/*List_Comprehension.py
 # https://scikit-learn.org/stable/modules/generated/sklearn.impute.SimpleImputer.html#sklearn.impute.SimpleImputer.fit_transform
 
-df = pd.read_csv('../data/example.csv', index_col='Student_ID')
-
 # Only keep numerical columns
 df.dtypes
 df_clean = df.select_dtypes(exclude=['object'])
@@ -90,3 +88,14 @@ df_clean = df.dropna(axis=0)
 # 2. Drow rows only if the target variable value is missing
 df_clean = df.dropna(axis=0, subset=['target_variable_name'])
 
+### Manage missingness pipeline ###
+# Read data
+df = pd.read_csv('../data/example.csv', index_col='Student_ID')
+
+# Initial inspection on data
+df.columns
+df.shape()
+df.head()
+df.describe()
+miss_dist = df.isnull().sum()/len(df)
+print(miss_dist)
