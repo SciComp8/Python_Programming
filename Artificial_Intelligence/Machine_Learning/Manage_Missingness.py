@@ -14,7 +14,7 @@ def score_miss_strategy(rf, X_t=X_train, X_v=X_valid, y_t=y_train, y_v=y_valid):
     preds = rf.predict(X_v)
     return mean_absolute_error(y_v, preds)
 
-# Manage missingness in columns
+### Manage missingness in columns ###
 # 1. Drop columns with missing values
 # Method 1:
 df_clean = df.dropna(axis=1, how='any')
@@ -80,7 +80,7 @@ X_valid_new_imputed = pd.DataFrame(imputer_mean.transform(X_valid_new)) # transf
 X_train_new_imputed.columns = X_train_new.columns
 X_valid_new_imputed.columns = X_valid_new.columns
 
-# Manage missingness in rows
+### Manage missingness in rows ###
 # 1. Drop rows with missing values
 df_clean = df.dropna(axis=0)
 
