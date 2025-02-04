@@ -62,6 +62,23 @@ X_valid_imputed = pd.DataFrame(imputer_mean.transform(X_valid)) # transform
 # This ensures that the imputation process remains consistent and that the validation set doesn't influence the imputation statistics.
 
 # 4. Add a new column that shows the location of the imputed entries
+# Make copies to avoid changing original training and validation data
+X_train_new = X_train.copy()
+X_valid_new = X_valid.copy()
+
+# For columns with missing values, create a corresponding new column indicating which record will be imputed
+for col in col_miss:
+    X_train_new[col + '_miss'] = X_train_new[col].isnull()
+    X_valid_new[col + '_miss'] = X_valid_new[col].isnull()
+
+# Perform imputation
+imputer_mean = SimpleImputer(strategy='mean')
+X_train_new_imputed = pd.DataFrame(imputer_mean.fit_transform(X_train_new)) # fit_transform
+X_valid_new_imputed = pd.DataFrame(imputer_mean.transform(X_valid_new)) # transform
+
+# As the imputation process removes column names, we place them back to data
+X_train_new_imputed.columns = X_train_new.columns
+X_valid_new_imputed.columns = X_valid_new.columns
 
 # Manage missingness in rows
 # 1. Drop rows with missing values
