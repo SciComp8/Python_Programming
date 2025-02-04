@@ -8,7 +8,7 @@ df.dtypes
 df_clean = df.select_dtypes(exclude=['object'])
 
 # Define a scoring mechanism to evaluate the impact of each missingness management strategy on model performance
-def score_rf(rf, X_t=X_train, X_v=X_valid, y_t=y_train, y_v=y_valid):
+def score_miss_strategy(rf, X_t=X_train, X_v=X_valid, y_t=y_train, y_v=y_valid):
     rf = RandomForestRegressor(n_estimators=50, random_state=9)
     rf.fit(X_t, y_t)
     preds = rf.predict(X_v)
