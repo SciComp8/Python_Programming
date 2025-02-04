@@ -94,9 +94,11 @@ df_clean = df.dropna(axis=0, subset=['target_variable_name'])
 ### Manage missingness pipeline ###
 # Read data
 df_train = pd.read_csv('../data/feature_train.csv', index_col='Student_ID')
-df_valid = pd.read_csv('../data/feature_test.csv', index_col='Student_ID')
+df_valid = pd.read_csv('../data/feature_valid.csv', index_col='Student_ID')
+df_test = pd.read_csv('../data/feature_test.csv', index_col='Student_ID')
 y_train = pd.read_csv('../data/target_train.csv', index_col='Student_ID')
-y_valid = pd.read_csv('../data/target_test.csv', index_col='Student_ID')
+y_valid = pd.read_csv('../data/target_valid.csv', index_col='Student_ID')
+y_test = pd.read_csv('../data/target_test.csv', index_col='Student_ID')
 
 # Initial inspection on data
 df_train.columns
@@ -131,3 +133,13 @@ df_valid_imputed.columns = df_valid.columns
 print("The mean absolute error after droping columns with any missing values:")
 print(score_miss_strategy(X_t=df_train_imputed, X_v=df_valid_imputed, y_t=y_train, y_v=y_valid))
 
+# Preprocess test data
+df_test_imputed = pd.DataFrame(imputer_mean.transform(df_test)) 
+df_test_imputed.columns = df_test.columns
+
+# Build model and make predictions
+rf = RandomForestRegressor(n_estimators=50, random_state=9)
+preds_test = rf.predict(df_test_imputed)
+
+submit_preds = pd.DataFrame({'Id': df_test_imputed.Id, 'Price': preds_test})
+submit_preds.to_csv('submit_preds.csv', index=False)
