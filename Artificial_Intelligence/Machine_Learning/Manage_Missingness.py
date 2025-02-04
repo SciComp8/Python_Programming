@@ -1,5 +1,4 @@
 # Manage missingness in columns
-
 # 1. Drop columns with missing values
 df_clean = df.dropna(axis=1, how='any')
 # how='all': drops a column only if all values are missing
@@ -16,6 +15,8 @@ df["column_name_1"].transform(miss_median)
 
 miss_mean = lambda x: x.fillna(x.mean())
 df["column_name_1"].transform(miss_mean)
+
+# 4. Add a new column that shows the location of the imputed entries
 
 # Manage missingness in rows
 # 1. Drop rows with missing values
