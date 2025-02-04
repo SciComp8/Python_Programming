@@ -91,8 +91,10 @@ df_clean = df.dropna(axis=0, subset=['target_variable_name'])
 
 ### Manage missingness pipeline ###
 # Read data
-df_train = pd.read_csv('../data/example_train.csv', index_col='Student_ID')
-df_test = pd.read_csv('../data/example_test.csv', index_col='Student_ID')
+df_train = pd.read_csv('../data/feature_train.csv', index_col='Student_ID')
+df_test = pd.read_csv('../data/feature_test.csv', index_col='Student_ID')
+y_train = pd.read_csv('../data/target_train.csv', index_col='Student_ID')
+y_test = pd.read_csv('../data/target_test.csv', index_col='Student_ID')
 
 # Initial inspection on data
 df_train.columns
