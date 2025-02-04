@@ -8,6 +8,9 @@ df_clean = df.dropna(axis=1, how='any').copy()
 # If I only read or perform operations that don’t change df_clean, I will not need .copy().
 
 # 2. Drop a column with missing values when the missingness proportion in this column is very high
+miss_dist = df.isnull().sum()/len(df)
+print(miss_dist)
+df_clean = df.drop(columns=["column_name_with_high_miss"])
 
 # 3. Impute the missing values using median or mean
 miss_median = lambda x: x.fillna(x.median())
