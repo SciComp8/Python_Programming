@@ -92,9 +92,9 @@ df_clean = df.dropna(axis=0, subset=['target_variable_name'])
 ### Manage missingness pipeline ###
 # Read data
 df_train = pd.read_csv('../data/feature_train.csv', index_col='Student_ID')
-df_test = pd.read_csv('../data/feature_test.csv', index_col='Student_ID')
+df_valid = pd.read_csv('../data/feature_test.csv', index_col='Student_ID')
 y_train = pd.read_csv('../data/target_train.csv', index_col='Student_ID')
-y_test = pd.read_csv('../data/target_test.csv', index_col='Student_ID')
+y_valid = pd.read_csv('../data/target_test.csv', index_col='Student_ID')
 
 # Initial inspection on data
 df_train.columns
@@ -114,12 +114,18 @@ def score_miss_strategy(X_t=X_train, X_v=X_valid, y_t=y_train, y_v=y_valid):
 # Strategy 1: systematically drop columns with any missing values
 col_miss = [col for col in df_train.columns if df_train[col].isnull().any()]
 df_train_reduced = df_train.drop(col_miss, axis=1)
-df_test_reduced = df_test.drop(col_miss, axis=1)
+df_valid_reduced = df_valid.drop(col_miss, axis=1)
 
 print("The mean absolute error after droping columns with any missing values:")
-print(score_miss_strategy(X_t=df_train_reduced, X_v=df_test_reduced, y_t=y_train, y_v=y_test))
+print(score_miss_strategy(X_t=df_train_reduced, X_v=df_valid_reduced, y_t=y_train, y_v=y_valid))
 
-# Perform imputation and evaluate impact of different imputation strategies on model performance
+# Strategy 2: imputation 
 imputer_mean = SimpleImputer(strategy='mean')
-X_train_imputed = pd.DataFrame(imputer_mean.fit_transform(X_train)) 
-X_valid_imputed = pd.DataFrame(imputer_mean.transform(X_valid)) 
+df_train_imputed = pd.DataFrame(imputer_mean.fit_transform(df_train)) 
+df_valid_imputed = pd.DataFrame(imputer_mean.transform(df_valid)) 
+df_train_imputed.columns = df_train.columns
+df_valid_imputed.columns = df_valid.columns
+
+print("The mean absolute error after droping columns with any missing values:")
+print(score_miss_strategy(X_t=df_train_imputed, X_v=df_valid_imputed, y_t=y_train, y_v=y_valid))
+
