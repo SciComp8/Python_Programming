@@ -1,6 +1,6 @@
 pd.read_csv()
 file_name = 'CONNECTOME_MATRICES.csv'
-con_mat = pd.read_csv(file_path + file_name)
+con_mat = pd.read_csv(file_path + file_name, index_col='Id')
 con_mat.head()
 
 pd.read_excel()
