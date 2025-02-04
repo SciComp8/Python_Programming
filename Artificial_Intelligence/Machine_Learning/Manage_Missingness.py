@@ -48,10 +48,11 @@ df["column_name_1"].transform(miss_mean)
 from sklearn.impute import SimpleImputer
 imputer_median = SimpleImputer(missing_values=np.nan, strategy='median')
 df_clean = pd.DataFrame(imputer_median.fit_transform(df))
+df_clean.columns = df.columns
 
 imputer_mean = SimpleImputer(missing_values=np.nan, strategy='mean')
 df_clean = pd.DataFrame(imputer_mean.fit_transform(df))
-
+df_clean.columns = df.columns
 
 # 4. Add a new column that shows the location of the imputed entries
 
