@@ -2,6 +2,7 @@
 # https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dtypes.html
 # https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Random_Forest_Price_V2.py
 # https://github.com/SciComp8/Python_Programming/blob/main/Utilities/List/*List_Comprehension.py
+# https://scikit-learn.org/stable/modules/generated/sklearn.impute.SimpleImputer.html#sklearn.impute.SimpleImputer.fit_transform
 
 # Only keep numerical columns
 df.dtypes
