@@ -15,8 +15,13 @@ def score_rf(rf, X_t=X_train, X_v=X_valid, y_t=y_train, y_v=y_valid):
 
 # Manage missingness in columns
 # 1. Drop columns with missing values
+# Method 1:
 df_clean = df.dropna(axis=1, how='any')
 # how='all': drops a column only if all values are missing
+
+# Method 2: 
+col_miss = [col for col in df.columns if df[col].isnull().any()]
+df_clean = df.drop(col_miss, axis=1)
 
 df_clean = df.dropna(axis=1, how='any').copy()
 # If I modify df_clean without altering df, then using .copy() is a safe practice. 
