@@ -56,7 +56,7 @@ imputer_mean = SimpleImputer(missing_values=np.nan, strategy='mean')
 df_clean = pd.DataFrame(imputer_mean.fit_transform(df))
 df_clean.columns = df.columns
 
-# Do imputation on training and validation sets
+# Perform imputation on training and validation sets
 imputer_mean = SimpleImputer(strategy='mean')
 X_train_imputed = pd.DataFrame(imputer_mean.fit_transform(X_train)) # fit_transform
 X_valid_imputed = pd.DataFrame(imputer_mean.transform(X_valid)) # transform
@@ -100,3 +100,12 @@ df.head()
 df.describe()
 miss_dist = df.isnull().sum()/len(df)
 print(miss_dist)
+
+# Systematically drop columns with any missing values
+col_miss = [col for col in df.columns if df[col].isnull().any()]
+df_clean = df.drop(col_miss, axis=1)
+
+# Perform imputation and evaluate impact of different imputation strategies on model performance
+imputer_mean = SimpleImputer(strategy='mean')
+X_train_imputed = pd.DataFrame(imputer_mean.fit_transform(X_train)) 
+X_valid_imputed = pd.DataFrame(imputer_mean.transform(X_valid)) 
