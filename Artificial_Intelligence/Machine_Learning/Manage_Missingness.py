@@ -1,6 +1,10 @@
 # Reference:
 # https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dtypes.html
 
+# Only keep numerical columns
+df.dtypes
+df_clean = df.select_dtypes(exclude=['object'])
+
 # Manage missingness in columns
 # 1. Drop columns with missing values
 df_clean = df.dropna(axis=1, how='any')
