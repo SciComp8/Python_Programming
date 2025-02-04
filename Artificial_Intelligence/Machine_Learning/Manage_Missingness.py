@@ -17,7 +17,8 @@ df_clean = df.dropna(axis=1, how='any').copy()
 # 2. Drop a column with missing values when the missingness proportion in this column is very high
 miss_dist = df.isnull().sum()/len(df)
 print(miss_dist)
-df_clean = df.drop(columns=["column_name_with_high_miss"])
+df_clean = df.drop(columns=['column_name_with_high_miss'])
+# df_clean = df.drop(['column_name_with_high_miss'], axis=1)
 
 # 3. Impute the missing values using median or mean
 # Method 1:
