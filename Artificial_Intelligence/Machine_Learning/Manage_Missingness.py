@@ -25,8 +25,8 @@ col_miss = [col for col in df.columns if df[col].isnull().any()]
 df_clean = df.drop(col_miss, axis=1)
 
 df_clean = df.dropna(axis=1, how='any').copy()
-# If I modify df_clean without altering df, then using .copy() is a safe practice. 
-# If I only read or perform operations that don’t change df_clean, I will not need .copy().
+# If we modify df_clean without altering df, then using .copy() is a safe practice. 
+# If we only read or perform operations that don’t change df_clean, we will not need .copy().
 
 # 2. Drop a column with missing values when the missingness proportion in this column is very high
 miss_dist = df.isnull().sum()/len(df)
