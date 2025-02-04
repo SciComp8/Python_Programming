@@ -7,6 +7,11 @@
 # Only keep numerical columns
 df.dtypes
 df_clean = df.select_dtypes(exclude=['object'])
+df_clean = df.select_dtypes(include=['int64', 'float64'])
+
+num_col = [col for col in df.columns if df[col].dtype in ['int64', 'float64']]
+df_clean = df[num_col].copy()
+
 
 # Define a scoring mechanism to evaluate the impact of each missingness management strategy on model performance
 def score_miss_strategy(X_t=X_train, X_v=X_valid, y_t=y_train, y_v=y_valid):
