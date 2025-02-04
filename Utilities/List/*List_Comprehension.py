@@ -56,14 +56,21 @@ for row in matrix:
 # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 # Case 5: conditionals on the iterable in comprehensions
-# newlist = [expression for iterator variable in iterable + conditional on iterable]
+# newlist = [expression for iterator variable in iterable + conditional on iterator variable]
 # Only do the operations on iterator variables that fit the condition
+
+# Drop column with any missing value
+col_miss = [col for col in df.columns if df[col].isnull().any()]
+df_clean = df.drop(col_miss, axis=1)
+# Iterator variable: col; iterable: df.columns; conditional on iterator variable: if df[col].isnull().any()
+
 aa = ['histidine', 'isoleucine', 'leucine', 'lysine', 'methionine', 'phenylalanine', 'threonine', 'tryptophan', 'valine']
 aa_target = [x for x in aa if "t" in x]
 print(aa_target)
 # ['histidine', 'methionine', 'threonine', 'tryptophan']
 
-# Case 5.1:estimate the proportion of positives/negatives/zeros in a list
+
+# Case 5.1: estimate the proportion of positives/negatives/zeros in a list
 def calc_prop(data): 
     total = len(data)
     num_pos = sum([1 for i in data if i > 0]) # Notice
