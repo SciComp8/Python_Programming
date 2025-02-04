@@ -13,11 +13,23 @@ print(miss_dist)
 df_clean = df.drop(columns=["column_name_with_high_miss"])
 
 # 3. Impute the missing values using median or mean
+# Method 1:
 miss_median = lambda x: x.fillna(x.median())
 df["column_name_1"].transform(miss_median)
 
 miss_mean = lambda x: x.fillna(x.mean())
 df["column_name_1"].transform(miss_mean)
+
+# Method 2:
+from sklearn.impute import SimpleImputer
+imputer_median = SimpleImputer(missing_values=np.nan, strategy='median')
+imputer_median.fit(df)
+df_clean = np.array(imputer_median.transform(df), dtype=np.float32)
+
+imputer_mean = SimpleImputer(missing_values=np.nan, strategy='mean')
+imputer_mean.fit(df)
+df_clean = np.array(imputer_mean.transform(df), dtype=np.float32)
+
 
 # 4. Add a new column that shows the location of the imputed entries
 
