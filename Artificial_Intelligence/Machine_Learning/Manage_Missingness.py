@@ -35,6 +35,8 @@ df_clean = df.drop(columns=['column_name_with_high_miss'])
 # df_clean = df.drop(['column_name_with_high_miss'], axis=1)
 
 # 3. Impute the missing values using median or mean
+# Although mean imputation is a simple approach, it usually performs remarkably well (with some variation across datasets). 
+# Even though there are more sophisticated techniques—such as regression imputation, these methods rarely offer any significant advantage once the data is processed by advanced machine learning models.
 # Method 1:
 miss_median = lambda x: x.fillna(x.median())
 df["column_name_1"].transform(miss_median)
