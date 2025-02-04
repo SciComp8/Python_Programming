@@ -4,6 +4,8 @@
 # https://github.com/SciComp8/Python_Programming/blob/main/Utilities/List/*List_Comprehension.py
 # https://scikit-learn.org/stable/modules/generated/sklearn.impute.SimpleImputer.html#sklearn.impute.SimpleImputer.fit_transform
 
+df = pd.read_csv('../data/example.csv', index_col='Student_ID')
+
 # Only keep numerical columns
 df.dtypes
 df_clean = df.select_dtypes(exclude=['object'])
@@ -33,7 +35,7 @@ df_clean = df.dropna(axis=1, how='any').copy()
 miss_dist = df.isnull().sum()/len(df)
 print(miss_dist)
 df_clean = df.drop(columns=['column_name_with_high_miss'])
-# df_clean = df.drop(['column_name_with_high_miss'], axis=1)
+df_clean = df.drop(['column_name_with_high_miss'], axis=1) # Equivalent
 
 # 3. Impute the missing values using median or mean
 # Although mean imputation is a simple approach, it usually performs remarkably well (with some variation across datasets). 
@@ -82,6 +84,9 @@ X_train_new_imputed.columns = X_train_new.columns
 X_valid_new_imputed.columns = X_valid_new.columns
 
 ### Manage missingness in rows ###
-# 1. Drop rows with missing values
+# 1. Drop rows with any missing values
 df_clean = df.dropna(axis=0)
+
+# 2. Drow rows only if the target variable value is missing
+df_clean = df.dropna(axis=0, subset=['target_variable_name'])
 
