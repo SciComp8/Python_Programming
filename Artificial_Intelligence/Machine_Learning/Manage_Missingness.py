@@ -54,6 +54,13 @@ imputer_mean = SimpleImputer(missing_values=np.nan, strategy='mean')
 df_clean = pd.DataFrame(imputer_mean.fit_transform(df))
 df_clean.columns = df.columns
 
+# Do imputation on training and validation sets
+imputer_mean = SimpleImputer(strategy='mean')
+X_train_imputed = pd.DataFrame(imputer_mean.fit_transform(X_train)) # fit_transform
+X_valid_imputed = pd.DataFrame(imputer_mean.transform(X_valid)) # transform
+# We apply the same imputation parameters (mean) that were derived from the training data, without recalculating them on the validation data. 
+# This ensures that the imputation process remains consistent and that the validation set doesn't influence the imputation statistics.
+
 # 4. Add a new column that shows the location of the imputed entries
 
 # Manage missingness in rows
