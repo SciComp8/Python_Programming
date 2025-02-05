@@ -19,3 +19,16 @@ X_test = pd.get_dummies(data_test[features]) #
 OH_encoder = OneHotEncoder(handle_unknown='ignore', sparse=False)
 # handle_unknown='ignore': prevent errors when the validation set contains classes absent from the training data
 # sparse=False: guarantees that the encoded columns are output as a dense NumPy array rather than as a sparse matrix
+X_train_OH = pd.DataFrame(OH_encoder.fit_transform(X_train[features]))
+X_valid_OH = pd.DataFrame(OH_encoder.transform(X_valid[features]))
+X_train_OH.index = X_train.index
+X_valid_OH.index = X_valid.index
+
+# Select numerical variables
+X_train_num = data_train.drop(features, axis=1)
+X_valid_num = data_valid.drop(features, axis=1)
+
+# Combine numerical variables and one-hot encoded variables
+X_train = pd.concat([X_train_num, X_train_OH], axis=1)
+X_valid = pd.concat([X_valid_num, X_valid_OH], axis=1)
+
