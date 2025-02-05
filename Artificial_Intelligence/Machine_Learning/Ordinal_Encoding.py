@@ -13,7 +13,6 @@ y_valid = data_valid["Methylation_Level"]
 features = ["Grade_Category", "Age_Category", "BMI_Category"]
 
 ordinal_encoder = OrdinalEncoder()
-
 X_train = ordinal_encoder.fit_transform(data_train[features]) 
 X_valid = ordinal_encoder.transform(data_valid[features]) #
 # For these categorical variables, we randomly map each unique category value to a distinct integer. 
