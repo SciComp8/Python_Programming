@@ -19,6 +19,10 @@ y_train = data_train["Methylation_Level"]
 y_valid = data_valid["Methylation_Level"]
 features = ["Grade_Category", "Age_Category", "BMI_Category"]
 
+# Take a look at the categorical variable
+print("The unique values in 'Grade_Category' column in training data:", data_train['Grade_Category'].unique())
+print("\nThe unique values in 'Grade_Category' column in validation data:", data_valid['Grade_Category'].unique())
+
 ordinal_encoder = OrdinalEncoder()
 X_train = ordinal_encoder.fit_transform(data_train[features]) 
 X_valid = ordinal_encoder.transform(data_valid[features]) #
