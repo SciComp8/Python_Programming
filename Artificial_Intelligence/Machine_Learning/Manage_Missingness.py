@@ -12,16 +12,15 @@ df_clean = df.select_dtypes(include=['int64', 'float64'])
 num_col = [col for col in df.columns if df[col].dtype in ['int64', 'float64']]
 df_clean = df[num_col].copy()
 
-
+### Manage missingness in columns ###
 # Define a scoring mechanism to evaluate the impact of each missingness management strategy on model performance
 def score_miss_strategy(X_t=X_train, X_v=X_valid, y_t=y_train, y_v=y_valid):
     rf = RandomForestRegressor(n_estimators=50, random_state=9)
     rf.fit(X_t, y_t)
     preds = rf.predict(X_v)
     return mean_absolute_error(y_v, preds)
-
-### Manage missingness in columns ###
-# 1. Drop columns with missing values
+    
+# S1. Drop columns with missing values
 # Method 1:
 df_clean = df.dropna(axis=1, how='any')
 # how='all': drops a column only if all values are missing
@@ -37,13 +36,13 @@ df_clean = df.dropna(axis=1, how='any').copy()
 # If we modify df_clean without altering df, then using .copy() is a safe practice. 
 # If we only read or perform operations that don’t change df_clean, we will not need .copy().
 
-# 2. Drop a column with missing values when the missingness proportion in this column is very high
+# S2. Drop a column with missing values when the missingness proportion in this column is very high
 miss_dist = df.isnull().sum()/len(df)
 print(miss_dist)
 df_clean = df.drop(columns=['column_name_with_high_miss'])
 df_clean = df.drop(['column_name_with_high_miss'], axis=1) # Equivalent
 
-# 3. Impute the missing values using median or mean
+# S3. Impute the missing values using median or mean
 # Although mean imputation is a simple approach, it usually performs remarkably well (with some variation across datasets). 
 # Even though there are more sophisticated techniques—such as regression imputation, these methods rarely offer any significant advantage once the data is processed by advanced machine learning models.
 # Method 1:
@@ -70,7 +69,7 @@ X_valid_imputed = pd.DataFrame(imputer_mean.transform(X_valid)) # transform
 # We apply the same imputation parameters (mean) that were derived from the training data, without recalculating them on the validation data. 
 # This ensures that the imputation process remains consistent and that the validation set doesn't influence the imputation statistics.
 
-# 4. Add a new column that shows the location of the imputed entries
+# S4. Add a new column that shows the location of the imputed entries
 # Make copies to avoid changing original training and validation data
 X_train_new = X_train.copy()
 X_valid_new = X_valid.copy()
@@ -90,10 +89,10 @@ X_train_new_imputed.columns = X_train_new.columns
 X_valid_new_imputed.columns = X_valid_new.columns
 
 ### Manage missingness in rows ###
-# 1. Drop rows with any missing values
+# S1. Drop rows with any missing values
 df_clean = df.dropna(axis=0)
 
-# 2. Drow rows only if the target variable value is missing
+# S2. Drop rows only if the target variable value is missing
 df_clean = df.dropna(axis=0, subset=['target_variable_name'])
 
 ### Manage missingness pipeline ###
@@ -112,6 +111,9 @@ df_train.head()
 df_train.describe()
 miss_dist = df_train.isnull().sum()/len(df)
 print(miss_dist)
+
+# Drop rows if the target variable value is missing
+df_train = df.dropna(axis=0, subset=['target_variable_name'])
 
 # Define a scoring mechanism to evaluate the impact of each missingness management strategy on model performance
 def score_miss_strategy(X_t=X_train, X_v=X_valid, y_t=y_train, y_v=y_valid):
