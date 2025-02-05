@@ -2,10 +2,20 @@
 # But, when the categorical variable takes on > 15 different values, this approach does not work well.
 
 import pandas as pd
-train_data = pd.read_csv("../data/raw/train.csv")
-test_data = pd.read_csv("../data/raw/test.csv")
+from sklearn.preprocessing import OneHotEncoder
 
-y = train_data["Outcome"]
-features = ["Gender", "Ethnicity"]
-X = pd.get_dummies(train_data[features]) 
-X_test = pd.get_dummies(test_data[features]) #
+data_train = pd.read_csv("../data/raw/train.csv")
+data_valid = pd.read_csv("../data/raw/valid.csv")
+
+y_train = data_train["Methylation_Level"]
+y_valid = data_valid["Methylation_Level"]
+features = ["Grade_Category", "Age_Category", "BMI_Category"]
+
+# Method 1: 
+X_train = pd.get_dummies(data_train[features]) 
+X_test = pd.get_dummies(data_test[features]) #
+
+# Method 2: 
+OH_encoder = OneHotEncoder(handle_unknown='ignore', sparse=False)
+# handle_unknown='ignore': prevent errors when the validation set contains classes absent from the training data
+# sparse=False: guarantees that the encoded columns are output as a dense NumPy array rather than as a sparse matrix
