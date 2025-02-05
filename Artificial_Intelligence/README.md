@@ -19,7 +19,9 @@
 - [Manage missing values](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Manage_Missingness.py#L92)
   - [Impute missing values](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Manage_Missingness.py#L38)
   - [Drop missing values](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Manage_Missingness.py)
-- [Encode categorical variables](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/One_Hot_Encoding.py)
+- Encode categorical variables
+  - [Ordinal encoding](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Ordinal_Encoding.py)
+  - [One-hot encoding](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/One_Hot_Encoding.py)
 - [Normalize a feature](https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/pandas/*pandas_summary_statistics.py)
 
 ## Build a model: define -- fit -- predict -- evaluate
