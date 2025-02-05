@@ -18,6 +18,16 @@ y_train = data_train["Methylation_Level"]
 y_valid = data_valid["Methylation_Level"]
 features = ["Grade_Category", "Age_Category", "BMI_Category"]
 
+# Automatically obtain categorical variables
+cat = (data_train.dtypes == 'object')
+cat_name = list(cat[cat].index)
+# boolean Series is stored in the variable cat.
+# cat[cat] uses boolean indexing to select only those entries in the Series cat where the value is True. 
+# The .index attribute returns the index labels of this filtered Series cat[cat], which are the column names that have data type 'object'.
+
+print("This dataset has the following categorical variables:")
+print(cat_name)
+
 ### Method 1: 
 X_train = pd.get_dummies(data_train[features]) 
 X_test = pd.get_dummies(data_test[features]) #
