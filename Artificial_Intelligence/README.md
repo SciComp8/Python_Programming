@@ -2,8 +2,8 @@
 # Useful AI computing procedures
 
 ## Environment setup
-- [List files in the training and test folders](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/Generator.py#L122)
-- [Create symbolic links that allow us to access the file from another location without duplicating it](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/File/Create_SymbolicLink.py)
+- [What files are contained in training and test folders?](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/Generator.py#L122)
+- [Create symbolic links to access the file from another location without duplicating it](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/File/Create_SymbolicLink.py)
 
 ## Dataframe manipulation
 - [Read data](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/pandas/Read_Data.py)
@@ -20,6 +20,7 @@
   - [Impute missing values](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Manage_Missingness.py#L38)
   - [Drop missing values](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Manage_Missingness.py)
 - Encode categorical variables
+  - [Which variables are categorical?](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/List/*List_Comprehension.py)
   - [Ordinal encoding](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Ordinal_Encoding.py)
   - [One-hot encoding](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/One_Hot_Encoding.py)
 - [Normalize a feature](https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/pandas/*pandas_summary_statistics.py)
