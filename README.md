@@ -2,7 +2,7 @@
 
 *Last updated: 5 Feb 2025*
 
-Presenting a curated compilation of Python codes inspired from *Python Programming*, *AI in Medicine*, *Data Science*, *Bioinformatics Algorithm*, and *Computer Science*. This repository houses Python's real-world applications across varied scientific computing domains. 
+Presenting a curated compilation of Python codes inspired from *Python Programming*, *Data Science*, *Computer Science*, *AI in Medicine*, and *Bioinformatics Algorithm*. This repository houses Python's real-world applications across varied scientific computing domains. 
 
 | Python Basics | Python Advance | Data Structure | [Artificial Intelligence](https://github.com/SciComp8/Python_Programming/tree/main/Artificial_Intelligence) | 
 |----------|----------|----------|----------|
