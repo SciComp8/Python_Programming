@@ -4,6 +4,13 @@
 import pandas as pd
 from sklearn.preprocessing import OneHotEncoder
 
+# Define a scoring mechanism to evaluate the impact of each encoding strategy on model performance
+def score_encode_strategy(X_t=X_train, X_v=X_valid, y_t=y_train, y_v=y_valid):
+    rf = RandomForestRegressor(n_estimators=50, random_state=9)
+    rf.fit(X_t, y_t)
+    preds = rf.predict(X_v)
+    return mean_absolute_error(y_v, preds)
+
 data_train = pd.read_csv("../data/raw/train.csv")
 data_valid = pd.read_csv("../data/raw/valid.csv")
 
