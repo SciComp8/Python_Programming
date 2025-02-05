@@ -40,7 +40,8 @@ X_valid_num = data_valid.drop(features, axis=1)
 # Combine numerical variables and one-hot encoded variables
 X_train = pd.concat([X_train_num, X_train_OH], axis=1)
 X_valid = pd.concat([X_valid_num, X_valid_OH], axis=1)
-
 X_train.columns = X_train.columns.astype(str) # Convert each column name in the index to a string data type
 X_valid.columns = X_valid.columns.astype(str)
 
+print("The mean absolute error from One-Hot Encoding:") 
+print(score_encode_strategy(X_train, X_valid, y_train, y_valid))
