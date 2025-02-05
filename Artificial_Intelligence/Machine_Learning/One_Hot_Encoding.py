@@ -31,11 +31,15 @@ cat_name = list(cat[cat].index)
 print("This dataset has the following categorical variables:")
 print(cat_name)
 
-### Method 1: 
+# Take a look at the categorical variable
+print("The unique values in 'Grade_Category' column in training data:", data_train['Grade_Category'].unique())
+print("\nThe unique values in 'Grade_Category' column in validation data:", data_valid['Grade_Category'].unique())
+
+### OH method 1: 
 X_train = pd.get_dummies(data_train[features]) 
 X_test = pd.get_dummies(data_test[features]) #
 
-### Method 2: 
+### OH method 2: 
 OH_encoder = OneHotEncoder(handle_unknown='ignore', sparse=False)
 # handle_unknown='ignore': prevent errors when the validation set contains classes absent from the training data
 # sparse=False: guarantees that the encoded columns are output as a dense NumPy array rather than as a sparse matrix
