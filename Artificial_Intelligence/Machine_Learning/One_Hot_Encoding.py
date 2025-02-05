@@ -19,6 +19,9 @@ y_valid = data_valid["Methylation_Level"]
 features = ["Grade_Category", "Age_Category", "BMI_Category"]
 
 # Automatically obtain categorical variables
+# Method 1:
+data_train = data_train.select_dtypes(include=['object'])
+# Method 2:
 cat = (data_train.dtypes == 'object')
 cat_name = list(cat[cat].index)
 # boolean Series is stored in the variable cat.
