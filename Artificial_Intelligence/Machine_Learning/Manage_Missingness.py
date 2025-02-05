@@ -4,6 +4,10 @@
 # https://github.com/SciComp8/Python_Programming/blob/main/Utilities/List/*List_Comprehension.py
 # https://scikit-learn.org/stable/modules/generated/sklearn.impute.SimpleImputer.html#sklearn.impute.SimpleImputer.fit_transform
 
+import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_absolute_error
+
 # Only keep numerical columns
 df.dtypes
 df_clean = df.select_dtypes(exclude=['object'])
