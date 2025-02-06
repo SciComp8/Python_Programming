@@ -19,12 +19,21 @@ y_train = data_train["Methylation_Level"]
 y_valid = data_valid["Methylation_Level"]
 features = ["Grade_Category", "Age_Category", "BMI_Category"]
 
-# Take a look at the categorical variable
+# ! Take a look at the categorical variable
 # When we fit an ordinal encoder on the training data, it assigns each unique value a specific integer label. 
 # If the validation data contains values that weren't present in the training set, the encoder will raise an error because those new values don't have an assigned integer.
 # To address this problem, one way is to tailor an ordinal encoder to handle new categories; another is to remove the problematic categorical variables.
 print("The unique values in 'Grade_Category' column in training data:", data_train['Grade_Category'].unique())
 print("\nThe unique values in 'Grade_Category' column in validation data:", data_valid['Grade_Category'].unique())
+# Obtain categorical variables in the training data
+cat_var = [col for col in data_train.columns if data_train[col].dtype == "object"]
+# Obtain categorical variables that can be ordinally encoded
+cat_var_oe_yes = [col for col in cat_var if set(data_valid[col]).issubset(set(data_train[col]))]       
+# Drop categorical variables that CANNOT be ordinally encoded
+cat_var_oe_no = list(set(cat_var)-set(cat_var_oe_yes))
+        
+print('Categorical columns that will be ordinal encoded:', good_label_cols)
+print('\nCategorical columns that will be dropped from the dataset:', bad_label_cols)
 
 ordinal_encoder = OrdinalEncoder()
 X_train = ordinal_encoder.fit_transform(data_train[features]) 
