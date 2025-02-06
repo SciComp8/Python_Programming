@@ -1,5 +1,6 @@
 # Reference: 
 # https://science.nasa.gov/climate-change/effects/
+# https://github.com/SciComp8/Python_Programming/blob/main/Utilities/Function/Lambda_Function.py
 
 # Create a dictionary
 my_dict = {}
@@ -65,3 +66,7 @@ for key in my_yogurt:
 # Iterate the value
 for value in my_yogurt.values():
   print(f'\nprice: {value}')
+
+# Sort a dictionary by value
+# Pass a lambda functions as an argument into the sorted function
+print(dict(sorted(my_dict.items(), key=lambda item : item[1])))
