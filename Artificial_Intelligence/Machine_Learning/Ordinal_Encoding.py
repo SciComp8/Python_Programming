@@ -1,3 +1,6 @@
+# Reference:
+# https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/List_Categorical_Variable.py
+
 # The ordinal encoding approach assumes there is an inherent order of categories in the variable.
 
 import pandas as pd
