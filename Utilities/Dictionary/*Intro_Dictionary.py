@@ -1,3 +1,6 @@
+# Reference: 
+# https://science.nasa.gov/climate-change/effects/
+
 # Create a dictionary
 my_dict = {}
 climate_change_impact = {
@@ -5,7 +8,7 @@ climate_change_impact = {
   'Food': ['challenges for farming', 'heat-related health issues', 'harm livestock'],
   'Water': ['flooding', 'stronger and more frequent abnormally heavy precipitation events', 'drought', 'plants need more water', 'less snow overall'],
   'Infrastructure': ['more indoor cooling', 'flooding shuts down highways and major business areas', 'sea level rise affects coastal infrastructure (e.g., roads, bridges, water supplies)']
-} # Ref: https://science.nasa.gov/climate-change/effects/
+} 
 my_yogurt = {
   'kefir': 6.9,
   'filmjolk': 4.6,
@@ -24,8 +27,11 @@ make_dict(alpha = 1, beta = 2, gamma = 6)
 
 # Obtain items
 print(my_yogurt.items())
+# dict_items([('kefir', 6.9), ('filmjolk', 4.6), ('regular yogurt', 3.7)])
 print(my_yogurt.keys())
+# dict_keys(['kefir', 'filmjolk', 'regular yogurt'])
 print(my_yogurt.values())
+# dict_values([6.9, 4.6, 3.7])
 
 # Add new item
 my_yogurt['filmjolk2': 5.6]
