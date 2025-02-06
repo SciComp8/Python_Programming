@@ -69,4 +69,4 @@ for value in my_yogurt.values():
 
 # Sort a dictionary by value
 # Pass a lambda functions as an argument into the sorted function
-print(dict(sorted(my_dict.items(), key=lambda item : item[1])))
+print(dict(sorted(my_dict.items(), key=lambda item : item[1]))) # argument(s) : expression 
