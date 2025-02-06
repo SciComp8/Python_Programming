@@ -24,7 +24,7 @@ features = ["Grade_Category", "Age_Category", "BMI_Category"]
 data_train = data_train.select_dtypes(include=['object'])
 # Method 2:
 cat = (data_train.dtypes == 'object')
-cat_name = list(cat[cat].index)
+cat_var_name = list(cat[cat].index)
 # boolean Series is stored in the variable cat.
 # cat[cat] uses boolean indexing to select only those entries in the Series cat where the value is True. 
 # The .index attribute returns the index labels of this filtered Series cat[cat], which are the column names that have data type 'object'.
@@ -32,9 +32,18 @@ cat_name = list(cat[cat].index)
 print("This dataset has the following categorical variables:")
 print(cat_name)
 
-# Take a look at the categorical variable
+# Take a look at the categories in eachcategorical variable
 print("The unique values in 'Grade_Category' column in training data:", data_train['Grade_Category'].unique())
 print("\nThe unique values in 'Grade_Category' column in validation data:", data_valid['Grade_Category'].unique())
+
+cat_var_name = [col for col in X_train.columns if X_train[col].dtype == "object"]
+
+# Obtain the number of unique categories in each categorical variable
+cat_var_nunique = list(map(lambda col: data_train[col].nunique(), cat_var_name))
+cat_var_nunique_d = dict(zip(cat_var_name, cat_var_nunique)) # Create a zip iterator: zip_iterator = zip(list1, list2)
+print(cat_var_nunique_d)
+# Show the number of unique categories by categorical variable, in ascending order
+sorted(cat_var_nunique_d.items(), key=lambda x: x[1])
 
 ### OH method 1: 
 X_train = pd.get_dummies(data_train[features]) 
