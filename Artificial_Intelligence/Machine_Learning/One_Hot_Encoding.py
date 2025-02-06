@@ -1,5 +1,6 @@
 # The one-hot encoding approach is suitable when the categorical variable does not show clear ordering.
-# But, when the categorical variable takes on > 15 different values, this approach does not work well.
+# But, when the categorical variable takes on > 15 different values (i.e., cardinality), this approach does not work well.
+# Cardinality: number of unique entries of a categorical variable.
 
 import pandas as pd
 from sklearn.preprocessing import OneHotEncoder
