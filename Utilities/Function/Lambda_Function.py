@@ -47,6 +47,13 @@ print(cubic_all)
 print(list(cubic_all)) 
 # [216, 512, 3375, 0, 729000, 125000] # Actual elements in the map object
 
+import pandas as pd
+X_train = pd.read_csv('../data/raw/training.csv')
+cat_var_name = [col for col in X_train.columns if X_train[col].dtype == "object"]
+cat_var_nunique = list(map(lambda col: X_train[col].nunique(), cat_var_name))
+cat_var_nunique_d = dict(zip(cat_var_name, cat_var_nunique))
+print(cat_var_nunique_d)
+
 # Case 7: bioinformatics scenario: calculate the average expression level of a specific gene across all spatial locations. 
 gene_data = [
     {'gene_name': 'GeneA', 'location1': 10, 'location2': 15, 'location3': 8},
