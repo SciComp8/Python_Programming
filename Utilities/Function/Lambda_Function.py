@@ -34,12 +34,12 @@ NYC_news = filter(lambda x: x[0:3] == 'NYC', df['text']) # df['text'] is a colum
 for news_i in list(NYC_news):
     print(news_i)
 
-# Case 6: map with lambda 
+# ! Case 6: map with lambda 
 # Combining map with lambda is ideal when we want a concise, one-line transformation on each element of an iterable and don't want to define a separate function. 
 # It's suitable for simple operations where using a lambda keeps our code compact and functional. 
 # However, for more complex transformations or when readability is a concern, using a named function might be preferable.
 # The map function accepts two parameters: a function and a sequence, e.g., a list, and then proceeds to apply the specified function to each element within the given sequence.
-# map(func, seq); map(lambda_func, seq)
+# map(func, iterable); map(lambda_func, iterable)
 num_list = [6, 8, 15, 0, 90, 50]
 cubic_all = map(lambda num: num ** 3, num_list)
 print(cubic_all) 
