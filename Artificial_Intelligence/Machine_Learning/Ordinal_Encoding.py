@@ -34,17 +34,19 @@ cat_var = [col for col in data_train.columns if data_train[col].dtype == "object
 cat_var_oe_yes = [col for col in cat_var if set(data_valid[col]).issubset(set(data_train[col]))]       
 # Drop categorical variables that CANNOT be ordinally encoded
 cat_var_oe_no = list(set(cat_var)-set(cat_var_oe_yes))
+X_train = data_train.drop(cat_var_oe_no, axis=1)
+X_valid = data_valid.drop(cat_var_oe_no, axis=1)
         
 print('Categorical columns that will be ordinal encoded:', good_label_cols)
 print('\nCategorical columns that will be dropped from the dataset:', bad_label_cols)
 
 ordinal_encoder = OrdinalEncoder()
-X_train = ordinal_encoder.fit_transform(data_train[features]) 
-X_valid = ordinal_encoder.transform(data_valid[features]) #
+X_train = ordinal_encoder.fit_transform(X_train[features]) 
+X_valid = ordinal_encoder.transform(X_valid[features]) #
 # For these categorical variables, we randomly map each unique category value to a distinct integer. 
 # This straightforward method is widely used because it avoids the hassle of crafting custom labels. 
 # However, we may achieve better performance by assigning more meaningful, informed labels to ordinal variables.
-# We apply the same ordinal encoding parameters (categorical integer value) that were derived from the training data, without recalculating them on the validation data. 
+# ordinal_encoder.transform(X_valid[features]): we apply the same ordinal encoding parameters (categorical integer value) that were derived from the training data, without recalculating them on the validation data. 
 # This ensures that the variable encoding process remains consistent and that the validation set doesn't influence the encoding statistics.
 
 print("The mean absolute error from Ordinal Encoding:") 
