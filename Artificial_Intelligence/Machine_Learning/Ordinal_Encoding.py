@@ -40,6 +40,7 @@ X_valid = data_valid.drop(cat_var_oe_no, axis=1)
 print('Categorical columns that will be ordinal encoded:', good_label_cols)
 print('\nCategorical columns that will be dropped from the dataset:', bad_label_cols)
 
+# Construct ordinal encoding
 ordinal_encoder = OrdinalEncoder()
 X_train[features] = ordinal_encoder.fit_transform(X_train[features]) 
 X_valid[features] = ordinal_encoder.transform(X_valid[features]) #
