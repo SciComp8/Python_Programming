@@ -39,10 +39,12 @@ for news_i in list(NYC_news):
 # map(func, seq); map(lambda_func, seq)
 num_list = [6, 8, 15, 0, 90, 50]
 cubic_all = map(lambda num: num ** 3, num_list)
-print(cubic_all) # This is a map object
-print(list(cubic_all)) # View the actual elements in the map object
+print(cubic_all) 
+# <map object at 0x104447ac0> # A map object
+print(list(cubic_all)) 
+# [216, 512, 3375, 0, 729000, 125000] # Actual elements in the map object
 
-# Case 7: bioinformatics scenarior: calculate the average expression level of a specific gene across all spatial locations. 
+# Case 7: bioinformatics scenario: calculate the average expression level of a specific gene across all spatial locations. 
 gene_data = [
     {'gene_name': 'GeneA', 'location1': 10, 'location2': 15, 'location3': 8},
     {'gene_name': 'GeneB', 'location1': 5, 'location2': 12, 'location3': 7},
