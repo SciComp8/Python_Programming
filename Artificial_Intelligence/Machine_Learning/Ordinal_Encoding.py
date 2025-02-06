@@ -41,8 +41,8 @@ print('Categorical columns that will be ordinal encoded:', good_label_cols)
 print('\nCategorical columns that will be dropped from the dataset:', bad_label_cols)
 
 ordinal_encoder = OrdinalEncoder()
-X_train = ordinal_encoder.fit_transform(X_train[features]) 
-X_valid = ordinal_encoder.transform(X_valid[features]) #
+X_train[features] = ordinal_encoder.fit_transform(X_train[features]) 
+X_valid[features] = ordinal_encoder.transform(X_valid[features]) #
 # For these categorical variables, we randomly map each unique category value to a distinct integer. 
 # This straightforward method is widely used because it avoids the hassle of crafting custom labels. 
 # However, we may achieve better performance by assigning more meaningful, informed labels to ordinal variables.
