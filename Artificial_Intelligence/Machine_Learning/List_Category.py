@@ -2,6 +2,7 @@
 # https://github.com/SciComp8/Python_Programming/blob/main/Utilities/List/*List_Comprehension.py
 # https://github.com/SciComp8/Python_Programming/blob/main/Utilities/Function/Lambda_Function.py
 # https://github.com/SciComp8/Python_Programming/blob/main/Utilities/Tuple/zip.py
+# https://github.com/SciComp8/Python_Programming/blob/main/Utilities/Dictionary/*Intro_Dictionary.py
 
 import pandas as pd
 X_train = pd.read_csv('../data/raw/training.csv')
