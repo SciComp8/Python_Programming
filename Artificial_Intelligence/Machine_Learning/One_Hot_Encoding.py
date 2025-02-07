@@ -2,6 +2,7 @@
 # However, when the categorical variable takes on > 15 different values (i.e., cardinality), this approach does not work well.
 # Cardinality: number of unique entries of a categorical variable.
 # We can remove categorical variables with high cardinality, or we can ordinally encode these variables.
+# Ordinal encoding: if the validation data contains values that weren't present in the training set, the encoder will raise an error because those new values don't have an assigned integer.
 
 import pandas as pd
 from sklearn.preprocessing import OneHotEncoder
