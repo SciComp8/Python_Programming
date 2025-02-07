@@ -61,7 +61,8 @@ print('\nCategorical columns that will be dropped from the dataset:', high_cardi
 X_train = pd.get_dummies(data_train[features]) 
 X_test = pd.get_dummies(data_test[features]) #
 
-### ! OH method 2: 
+### ! OH method 2: S1 -> S2 -> S3
+# S1: use one-hot encoder to suitable categorical variables
 OH_encoder = OneHotEncoder(handle_unknown='ignore', sparse=False)
 # handle_unknown='ignore': prevent errors when the validation set contains classes absent from the training data.
 # When an unknown category is encountered during transform, the resulting one-hot encoded columns for this feature will be all zeros. 
@@ -71,13 +72,13 @@ X_valid_OH = pd.DataFrame(OH_encoder.transform(data_valid[features]))
 X_train_OH.index = data_train.index
 X_valid_OH.index = data_valid.index
 
-# Select numerical variables
-X_train_num = data_train.drop(features, axis=1)
+# S2: select numerical variables
+X_train_num = data_train.drop(cat_var_name, axis=1)
 # data_train.dtypes
 # X_train_num = data_train.select_dtypes(exclude=['object'])
-X_valid_num = data_valid.drop(features, axis=1)
+X_valid_num = data_valid.drop(cat_var_name, axis=1)
 
-# Combine numerical variables and one-hot encoded variables
+# S3: combine numerical variables and one-hot encoded variables
 X_train = pd.concat([X_train_num, X_train_OH], axis=1)
 X_valid = pd.concat([X_valid_num, X_valid_OH], axis=1)
 X_train.columns = X_train.columns.astype(str) # Convert each column name in the index to a string data type
