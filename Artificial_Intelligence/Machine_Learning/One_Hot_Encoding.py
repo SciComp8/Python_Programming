@@ -1,3 +1,6 @@
+# Reference:
+# https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html
+
 # The one-hot encoding approach is suitable when the categorical variable does not show clear ordering.
 # However, when the categorical variable takes on > 15 different values (i.e., cardinality), this approach does not work well.
 # Cardinality: number of unique entries of a categorical variable.
@@ -60,7 +63,8 @@ X_test = pd.get_dummies(data_test[features]) #
 
 ### ! OH method 2: 
 OH_encoder = OneHotEncoder(handle_unknown='ignore', sparse=False)
-# handle_unknown='ignore': prevent errors when the validation set contains classes absent from the training data
+# handle_unknown='ignore': prevent errors when the validation set contains classes absent from the training data.
+# When an unknown category is encountered during transform, the resulting one-hot encoded columns for this feature will be all zeros. 
 # sparse=False: guarantees that the encoded columns are output as a dense NumPy array rather than as a sparse matrix
 X_train_OH = pd.DataFrame(OH_encoder.fit_transform(data_train[features])) # data_train[cat_oh_yes]
 X_valid_OH = pd.DataFrame(OH_encoder.transform(data_valid[features]))
