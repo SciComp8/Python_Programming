@@ -150,6 +150,7 @@ df_test_imputed.columns = df_test.columns
 
 # Build model and make predictions
 rf = RandomForestRegressor(n_estimators=50, random_state=9)
+rf.fit(df_train_imputed, y_train)
 preds_test = rf.predict(df_test_imputed)
 
 submit_preds = pd.DataFrame({'Id': df_test_imputed.Id, 'Price': preds_test})
