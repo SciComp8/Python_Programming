@@ -33,7 +33,7 @@ cat_var_name = list(cat[cat].index)
 print("This dataset has the following categorical variables:")
 print(cat_name)
 
-# Take a look at the categories in eachcategorical variable
+# Take a look at the categories in each categorical variable
 print("The unique values in 'Grade_Category' column in training data:", data_train['Grade_Category'].unique())
 print("\nThe unique values in 'Grade_Category' column in validation data:", data_valid['Grade_Category'].unique())
 
@@ -45,19 +45,26 @@ cat_var_nunique_d = dict(zip(cat_var_name, cat_var_nunique)) # Create a zip iter
 print(cat_var_nunique_d)
 # Show the number of unique categories by categorical variable, in ascending order
 sorted(cat_var_nunique_d.items(), key=lambda x: x[1])
+# One-hot encode categorical variables with cardinality <= 15
+cat_oh_yes = [col for col in cat_var_name if data_train[col].nunique() <= 15]
+# Remove categorical variables with cardinality > 15
+cat_oh_no = list(set(cat_var_name)-set(cat_oh_yes))
+
+print('Categorical columns that will be one-hot encoded:', low_cardinality_cols)
+print('\nCategorical columns that will be dropped from the dataset:', high_cardinality_cols)
 
 ### OH method 1: 
 X_train = pd.get_dummies(data_train[features]) 
 X_test = pd.get_dummies(data_test[features]) #
 
-### OH method 2: 
+### ! OH method 2: 
 OH_encoder = OneHotEncoder(handle_unknown='ignore', sparse=False)
 # handle_unknown='ignore': prevent errors when the validation set contains classes absent from the training data
 # sparse=False: guarantees that the encoded columns are output as a dense NumPy array rather than as a sparse matrix
-X_train_OH = pd.DataFrame(OH_encoder.fit_transform(X_train[features]))
-X_valid_OH = pd.DataFrame(OH_encoder.transform(X_valid[features]))
-X_train_OH.index = X_train.index
-X_valid_OH.index = X_valid.index
+X_train_OH = pd.DataFrame(OH_encoder.fit_transform(data_train[features])) # data_train[cat_oh_yes]
+X_valid_OH = pd.DataFrame(OH_encoder.transform(data_valid[features]))
+X_train_OH.index = data_train.index
+X_valid_OH.index = data_valid.index
 
 # Select numerical variables
 X_train_num = data_train.drop(features, axis=1)
