@@ -1,5 +1,5 @@
 # The one-hot encoding approach is suitable when the categorical variable does not show clear ordering.
-# But, when the categorical variable takes on > 15 different values (i.e., cardinality), this approach does not work well.
+# However, when the categorical variable takes on > 15 different values (i.e., cardinality), this approach does not work well.
 # Cardinality: number of unique entries of a categorical variable.
 # We can remove categorical variables with high cardinality, or we can ordinally encode these variables.
 
