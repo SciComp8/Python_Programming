@@ -37,8 +37,8 @@ cat_var_oe_no = list(set(cat_var)-set(cat_var_oe_yes))
 X_train = data_train.drop(cat_var_oe_no, axis=1)
 X_valid = data_valid.drop(cat_var_oe_no, axis=1)
         
-print('Categorical columns that will be ordinal encoded:', good_label_cols)
-print('\nCategorical columns that will be dropped from the dataset:', bad_label_cols)
+print('Categorical columns that will be ordinal encoded:', cat_var_oe_yes)
+print('\nCategorical columns that will be dropped from the dataset:', cat_var_oe_no)
 
 # Construct ordinal encoding
 ordinal_encoder = OrdinalEncoder()
