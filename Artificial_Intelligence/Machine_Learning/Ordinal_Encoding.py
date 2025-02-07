@@ -24,7 +24,7 @@ features = ["Grade_Category", "Age_Category", "BMI_Category"]
 
 # ! Take a look at the categorical variable
 # When we fit an ordinal encoder on the training data, it assigns each unique value a specific integer label. 
-# If the validation data contains values that weren't present in the training set, the encoder will raise an error because those new values don't have an assigned integer.
+# ! If the validation data contains values that weren't present in the training set, the encoder will raise an error because those new values don't have an assigned integer.
 # To address this problem, one way is to tailor an ordinal encoder to handle new categories; another is to remove the problematic categorical variables.
 print("The unique values in 'Grade_Category' column in training data:", data_train['Grade_Category'].unique())
 print("\nThe unique values in 'Grade_Category' column in validation data:", data_valid['Grade_Category'].unique())
