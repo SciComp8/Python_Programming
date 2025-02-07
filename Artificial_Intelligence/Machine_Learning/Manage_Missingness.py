@@ -40,6 +40,18 @@ df_clean = df.dropna(axis=1, how='any').copy()
 # If we modify df_clean without altering df, then using .copy() is a safe practice. 
 # If we only read or perform operations that don’t change df_clean, we will not need .copy().
 
+#! Synchronize removal between 2 dataframes
+cols_with_missing_X = [col for col in X.columns if X[col].isnull().any()]
+print(cols_with_missing_X)
+cols_with_missing_test = [col for col in X_test.columns if X_test[col].isnull().any()]
+print(cols_with_missing_test) 
+# Identify all columns with any missing values in training and test data sets
+# Combine two lists and keep only the unique values,  by first concatenating them and then converting the result to a set (which automatically removes duplicates).
+cols_with_missing_all = list(set(cols_with_missing_X + cols_with_missing_test))
+print(cols_with_missing_all)
+X.drop(cols_with_missing_all, axis=1, inplace=True)
+X_test.drop(cols_with_missing_all, axis=1, inplace=True)
+
 # S2. Drop a column with missing values when the missingness proportion in this column is very high
 miss_dist = df.isnull().sum()/len(df)
 print(miss_dist)
