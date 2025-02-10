@@ -51,7 +51,7 @@ print(cat_var_nunique_d)
 sorted(cat_var_nunique_d.items(), key=lambda x: x[1])
 # One-hot encode categorical variables with cardinality <= 15
 cat_oh_yes = [col for col in cat_var_name if data_train[col].nunique() <= 15]
-# Remove categorical variables with cardinality > 15
+# Remove categorical variables with cardinality > 15; easy to implement but this removal of cateogorical variables are arbitrary
 cat_oh_no = list(set(cat_var_name)-set(cat_oh_yes))
 
 print('Categorical columns that will be one-hot encoded:', low_cardinality_cols)
