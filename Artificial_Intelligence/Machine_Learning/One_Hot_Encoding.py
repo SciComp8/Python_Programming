@@ -41,7 +41,7 @@ print(cat_name)
 print("The unique values in 'Grade_Category' column in training data:", data_train['Grade_Category'].unique())
 print("\nThe unique values in 'Grade_Category' column in validation data:", data_valid['Grade_Category'].unique())
 
-cat_var_name = [col for col in X_train.columns if X_train[col].dtype == "object"]
+cat_var_name = [col for col in data_train.columns if data_train[col].dtype == "object"]
 
 # Obtain the number of unique categories in each categorical variable
 cat_var_nunique = list(map(lambda col: data_train[col].nunique(), cat_var_name))
@@ -53,6 +53,11 @@ sorted(cat_var_nunique_d.items(), key=lambda x: x[1])
 cat_oh_yes = [col for col in cat_var_name if data_train[col].nunique() <= 15]
 # Remove categorical variables with cardinality > 15; easy to implement but this removal of cateogorical variables are arbitrary
 cat_oh_no = list(set(cat_var_name)-set(cat_oh_yes))
+
+# cat_var_name = [col for col in data_train.columns if data_train[col].dtype == "object"]
+# cat_oh_yes = [col for col in cat_var_name if data_train[col].nunique() <= 15]
+# One line code
+cat_oh_yes = [col for col in data_train.columns if data_train[col].dtype == "object" and data_train[col].nunique() <= 15]
 
 print('Categorical columns that will be one-hot encoded:', low_cardinality_cols)
 print('\nCategorical columns that will be dropped from the dataset:', high_cardinality_cols)
