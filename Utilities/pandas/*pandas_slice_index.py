@@ -131,6 +131,8 @@ Select columns
 """
 features = ['col_name_1', 'col_name_2', 'col_name_3']
 X = train_data[features]
+cat_features = [col for col in X_trainl.columns if X_train[col].dtype == 'object']
+num_features = [col for col in X_trainl.columns if X_train[col].dtype in ['int64', 'float64']]
 
 """
 Select columns using the index name locator "loc" versus the index number locator "iloc
