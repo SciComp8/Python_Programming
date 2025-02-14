@@ -23,3 +23,9 @@ X_train_select = X_train[feature].copy()
 X_valid_select = X_valid[feature].copy()
 X_test_select = X_test[feature].copy()
 X_train_select.head()
+
+num_transform = SimpleImputer(strategy='constant', fill_value=0)
+cat_transform = Pipeline(steps=[
+    ('impute', SimpleImputer(strategy='most_frequent')),
+    ('onehot', OneHotEncoder(handle_unknown='ignore'))
+])
