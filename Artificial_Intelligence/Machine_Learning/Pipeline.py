@@ -51,3 +51,8 @@ model_pip.fit(X_train, y_train)
 preds = model_pip.predict(X_valid)
 
 print('The mean absolute error is:', mean_absolute_error(y_valid, preds))
+
+preds_test = model_pip.predict(X_test)
+
+submit_preds = pd.DataFrame({'Id': X_test.Id, 'GDP': preds_test})
+submit_preds.to_csv('submit_preds.csv', index=False)
