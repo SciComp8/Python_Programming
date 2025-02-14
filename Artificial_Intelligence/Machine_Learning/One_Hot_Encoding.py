@@ -67,7 +67,7 @@ X_train = pd.get_dummies(data_train[features])
 X_test = pd.get_dummies(data_test[features]) #
 
 ### ! OH method 2: S1 -> S2 -> S3
-# S1: use one-hot encoder to suitable categorical variables
+# S1: use one-hot encoder for suitable categorical variables
 OH_encoder = OneHotEncoder(handle_unknown='ignore', sparse=False)
 # handle_unknown='ignore': prevent errors when the validation set contains classes absent from the training data.
 # When an unknown category is encountered during transform, the resulting one-hot encoded columns for this feature will be all zeros. 
