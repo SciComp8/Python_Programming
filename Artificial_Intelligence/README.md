@@ -30,6 +30,9 @@
 - [Train a decision tree classifier](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Decision_Tree_Mortality.ipynb)
 - [Train a random forest regressor](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Random_Forest_Price.py)
 
+## Make a pipeline that bundles imputation, one-hot encoding, model training, and model evaluation
+- [Pipeline]()
+  
 ## Fine-tune a model for better performance
 - [Evaluate the impact of different arguments on model performance](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Evaluate_Argument_Impact.py)
 - [Define several models with varied arguments and select the model with the best performance](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Random_Forest_Price_V2.py)
