@@ -58,7 +58,7 @@ def score_rf(rf, X_t=X_train, X_v=X_valid, y_t=y_train, y_v=y_valid):
 rfs = [rf_1, rf_2, rf_3, rf_4, rf_5]
 for i in range(0, len(rfs)):
     mae = score_rf(rfs[i])
-    print("The MAE of the random forest model %d is: %d" % (i+1, mae))
+    print("The mean absolute error of the random forest model %d is: %d" % (i+1, mae))
 
 # 7: Identify the model with best performance
 best_rf = rf_5
