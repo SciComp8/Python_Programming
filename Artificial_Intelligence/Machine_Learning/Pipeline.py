@@ -8,8 +8,8 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
 
 file_path = ['../raw/sale_data/economics_train.csv', '../raw/sale_data/economics_test.csv']
-X = pd.read_csv(file_path[0])
-X_test = pd.read_csv(file_path[1])
+X = pd.read_csv(file_path[0], index_col='Id')
+X_test = pd.read_csv(file_path[1], index_col='Id')
 X.drop(axis=0, subset=['GDP'], inplace=True)
 y = X.GDP
 
