@@ -26,7 +26,7 @@ X_train_select.head()
 
 num_transformer = SimpleImputer(strategy='constant', fill_value=0)
 cat_transformer = Pipeline(steps=[
-    ('impute', SimpleImputer(strategy='most_frequent')),
+    ('impute', SimpleImputer(strategy='most_frequent')), # strategy='constant'
     ('onehot', OneHotEncoder(handle_unknown='ignore', sparse=False))
 ])
 # handle_unknown='ignore': prevent errors when the validation set contains classes absent from the training data.
