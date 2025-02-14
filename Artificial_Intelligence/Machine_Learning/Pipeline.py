@@ -38,7 +38,7 @@ cat_transformer = Pipeline(steps=[
 
 preprocessor = ColumnTransformer(
     transformers=[
-        ('num', num_transformer, num_var),
+        ('num', num_transformer, num_var), # List of (name, transformer, columns) tuples
         ('cat', cat_transformer, cat_var)
     ])
 
