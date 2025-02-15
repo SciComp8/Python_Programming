@@ -31,6 +31,8 @@ print(X.describe())
 print(X.head())
 
 # 3: Split data into training and validation data
+# A larger validation set reduces noise in model quality assessment, making it more reliable. 
+# However, this requires sacrificing training data, which can lead to poorer model performance due to a smaller training set.
 train_X, val_X, train_y, val_y = train_test_split(X, y, train_size=0.7, test_size=0.3, random_state=9)
 
 # 4: Specify the model and fit the model with training data
