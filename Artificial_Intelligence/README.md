@@ -31,7 +31,7 @@
 - [Train a random forest regressor](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Random_Forest_Price.py)
 
 ## Make a pipeline that bundles imputation, one-hot encoding, model training, and model evaluation
-- [Pipeline]()
+- [Pipeline](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Pipeline.py)
   
 ## Fine-tune a model for better performance
 - [Evaluate the impact of different arguments on model performance](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Evaluate_Argument_Impact.py)
