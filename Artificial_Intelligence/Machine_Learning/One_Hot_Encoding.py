@@ -62,9 +62,14 @@ cat_oh_yes = [col for col in data_train.columns if data_train[col].dtype == "obj
 print('Categorical columns that will be one-hot encoded:', low_cardinality_cols)
 print('\nCategorical columns that will be dropped from the dataset:', high_cardinality_cols)
 
-### ! FAST OH method 1: 
+### ! Quick OH method 1: 
 X_train = pd.get_dummies(data_train[features]) 
-X_test = pd.get_dummies(data_test[features]) #
+X_valid = pd.get_dummies(data_valid[features]) #
+X_train, X_valid = X_train.align(X_valid, join='left', axis=1)
+# After one-hot encoding, the validation set might have different columns (e.g., if some categories are missing in the validation set). 
+# This alignment step ensures consistency.
+# join='left': Ensures that the columns in X_valid match those in X_train. If X_valid has extra columns, they are dropped. If X_valid is missing columns, they are added (with default values of 0).
+# axis=1: Specifies that the alignment is done column-wise.
 
 ### ! OH method 2: S1 -> S2 -> S3
 # S1: use one-hot encoder for suitable categorical variables
