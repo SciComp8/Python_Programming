@@ -62,7 +62,7 @@ cat_oh_yes = [col for col in data_train.columns if data_train[col].dtype == "obj
 print('Categorical columns that will be one-hot encoded:', low_cardinality_cols)
 print('\nCategorical columns that will be dropped from the dataset:', high_cardinality_cols)
 
-### OH method 1: 
+### ! FAST OH method 1: 
 X_train = pd.get_dummies(data_train[features]) 
 X_test = pd.get_dummies(data_test[features]) #
 
