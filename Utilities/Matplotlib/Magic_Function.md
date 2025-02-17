@@ -1,4 +1,5 @@
 
+# Inline
 ```
 %matplotlib inline
 ```
