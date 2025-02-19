@@ -29,6 +29,7 @@
 - [Train a decision tree regressor](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Decision_Tree_Price.py)
 - [Train a decision tree classifier](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Decision_Tree_Mortality.ipynb)
 - [Train a random forest regressor](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Random_Forest_Price.py)
+- [Train a gradient boosting regressor](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/XGBoost.py)
 
 ## Make a pipeline that bundles imputation, one-hot encoding, model training, and model evaluation
 - [Pipeline](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Pipeline.py)
