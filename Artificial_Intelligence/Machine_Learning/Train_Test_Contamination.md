@@ -15,4 +15,4 @@ To prevent this, always ensure that any fitting—whether for preprocessing or m
 Using scikit-learn pipelines can simplify this process, and it's especially vital to incorporate preprocessing within the pipeline when performing cross-validation.
 
 References: 
-- https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Cross_Validation.py
+- [Cross validation](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Cross_Validation.py)
