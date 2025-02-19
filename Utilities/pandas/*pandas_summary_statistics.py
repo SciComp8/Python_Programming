@@ -1,6 +1,8 @@
 # Compute built-in summary statistics
 # Check data with these statistics is important in a data science project. 
 # We may spot something in the dataset that needs further inspection.
+print("Number of rows in the dataset:", df.shape[0])
+print("Number of columns in the dataset:", df.shape[1])
 df.head()
 df.describe()
 
