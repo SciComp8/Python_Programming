@@ -40,7 +40,7 @@ df_clean = df.dropna(axis=1, how='any').copy()
 # If we modify df_clean without altering df, then using .copy() is a safe practice. 
 # If we only read or perform operations that don’t change df_clean, we will not need .copy().
 
-#! Synchronize removal between 2 dataframes
+# ! Synchronize removal between 2 dataframes
 cols_with_missing_X = [col for col in X.columns if X[col].isnull().any()]
 print(cols_with_missing_X)
 cols_with_missing_test = [col for col in X_test.columns if X_test[col].isnull().any()]
@@ -78,9 +78,9 @@ imputer_mean = SimpleImputer(missing_values=np.nan, strategy='mean')
 df_clean = pd.DataFrame(imputer_mean.fit_transform(df))
 df_clean.columns = df.columns
 
-# Perform imputation on training and validation sets
+# ! Perform imputation on training and validation sets
 imputer_mean = SimpleImputer(strategy='mean')
-X_train_imputed = pd.DataFrame(imputer_mean.fit_transform(X_train)) # fit_transform
+X_train_imputed = pd.DataFrame(imputer_mean.fit_transform(X_train)) # fit_transform; ! exclude the validation data from the fitting of preprocessing steps including imputation
 X_valid_imputed = pd.DataFrame(imputer_mean.transform(X_valid)) # transform
 # We apply the same imputation parameters (mean) that were derived from the training data, without recalculating them on the validation data. 
 # This ensures that the imputation process remains consistent and that the validation set doesn't influence the imputation statistics.
