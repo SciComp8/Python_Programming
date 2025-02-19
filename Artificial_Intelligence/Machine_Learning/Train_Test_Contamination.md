@@ -1,10 +1,10 @@
 
 
-Imagine we fit a preprocessor—say, an imputer for missing values—before splitting our data using train_test_split(). 
+Imagine we fit a preprocessor—say, an imputer for missing values—**before** splitting our data using `train_test_split()`. 
 
 Our model might score impressively during validation, yet underperform in real-world deployment.
 
-This happens because we've inadvertently allowed the model to incorporate the validation data during training. 
+**This happens because we've inadvertently allowed the model to incorporate the validation data during training**. 
 
 Consequently, it may overfit to the characteristics of that specific dataset, failing to generalize to new data. 
 
