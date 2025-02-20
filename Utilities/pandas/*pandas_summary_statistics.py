@@ -5,6 +5,7 @@ print("Number of rows in the dataset:", df.shape[0])
 print("Number of columns in the dataset:", df.shape[1])
 df.head()
 df.describe()
+df.info()
 
 # Estimate the mean
 df["column_name_1"].mean()
