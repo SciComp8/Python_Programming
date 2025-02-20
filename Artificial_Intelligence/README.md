@@ -16,7 +16,7 @@
   - [Randomly select rows](https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/pandas/*pandas_slice_index.py#L70)
 
 ## Data exploration
-- [Explorative data analysis](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/pandas/*pandas_summary_statistics.py)
+- [Explore data with summary statistics](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/pandas/*pandas_summary_statistics.py)
 
 
 ## Feature engineering
