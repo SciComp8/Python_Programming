@@ -16,7 +16,7 @@ df[df.var_1 == 'value']['var_2'].mean() # :)
 
 df["column_name_1"].median()
 df["column_name_1"].mode()
-print('The most frequent category is:', df['column_name_1'].mode().values, '\n')
+print('The most frequent category is:', df['column_name_1'].mode().values[0], '\n')
 df["column_name_1"].min()
 df["column_name_1"].max()
 df["column_name_1"].var()
