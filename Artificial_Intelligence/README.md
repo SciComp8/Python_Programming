@@ -15,6 +15,10 @@
   - [Use `train_test_split`](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Decision_Tree_Price.py#L33)
   - [Randomly select rows](https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/pandas/*pandas_slice_index.py#L70)
 
+## Data exploration
+- [Explorative data analysis](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/pandas/*pandas_summary_statistics.py)
+
+
 ## Feature engineering
 - [Manage missing values](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Manage_Missingness.py#L114)
   - [Impute missing values](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Manage_Missingness.py#L61)
