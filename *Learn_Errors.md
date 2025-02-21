@@ -1,5 +1,5 @@
 # Major types of errors in Python programming
-## Syntax Errors, also known as parsing errors
+## Syntax errors, also known as parsing errors
 The syntax errors indicate the syntax or structure of the code is incorrect. They are detected by the compiler or the interpreter.
 ### Concatenate 2 different types of objects
   ```python
@@ -11,21 +11,29 @@ The syntax errors indicate the syntax or structure of the code is incorrect. The
 
 ### Compare a number with a string
   ```python
-age = input('Please type your age: ')
-print('Are you older than 10?', age > 10)
-Traceback (most recent call last):
-  File "<pyshell#42>", line 1, in <module>
-    print('Are you older than 10?', age > 10)
-TypeError: '>' not supported between instances of 'str' and 'int'
+  age = input('Please type your age: ')
+  print('Are you older than 10?', age > 10)
+  Traceback (most recent call last):
+    File "<pyshell#42>", line 1, in <module>
+      print('Are you older than 10?', age > 10)
+  TypeError: '>' not supported between instances of 'str' and 'int'
   ```
 
-### Wrongly written keywords
+### Misspelled keywords
   ```python
   Cell In[17], line 3
   return y
   ^
   SyntaxError: 'return' outside function
   ```
+
+### Misspelled function name
+  ```python
+  df = sns.load_dataset("tips")
+  df['day'].value_count()
+  AttributeError: 'Series' object has no attribute 'value_count'.
+  ```
+
 ### Name is not defined (e.g., wrong variable/function names)
   ```python
   a = 8
