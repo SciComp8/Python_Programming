@@ -27,7 +27,7 @@ The syntax errors indicate the syntax or structure of the code is incorrect. The
   SyntaxError: 'return' outside function
   ```
 
-### Misspelled function name
+### Misspelled attribute name
   ```python
   df = sns.load_dataset("tips")
   df['day'].value_count()
