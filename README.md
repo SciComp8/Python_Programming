@@ -1,6 +1,6 @@
 # Python Computing Compendium | Do It Yourself!
 
-*Last updated: 20 Feb 2025*
+*Last updated: 21 Feb 2025*
 
 Presenting a curated compilation of Python codes inspired from *Python Programming*, *Data Science*, *Computer Science*, *AI in Medicine*, and *Bioinformatics Algorithm*. This repository houses Python's real-world applications across varied scientific computing domains. 
 
@@ -14,5 +14,9 @@ Presenting a curated compilation of Python codes inspired from *Python Programmi
 | [Arithmetic Calculations](Utilities/Math/Number) | [Symbolic Calculations](Utilities/Symbolic_Computation.py) | [Set](Utilities/Set) | [Logistic Regression with Grid Search](Artificial_Intelligence/Machine_Learning/Logistic_Regression_Mortality.ipynb) | 
 | [True Or False](Utilities/Operator/Boolean_Operator.py) | [Combinatorics](Utilities/Python_Combinatorics.ipynb) | [Class](Utilities/Class) | [PyTorch](Artificial_Intelligence/PyTorch) | 
 | [Work with Time](https://github.com/SciComp8/Python_Programming/tree/main/Utilities/Date) | [Format specifier](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/String/1_Format_String.py#L30) | | [Common Procedure](https://github.com/SciComp8/Python_Programming/tree/main/Artificial_Intelligence)
+
+
+# Python Computing Toolkits
+- [Integrate with seaborn by overlaying statistical annotations](https://github.com/trevismd/statannotations)
 
 
