@@ -175,6 +175,7 @@ df.sample(int(0.8 * df.shape[1]), axis=1, replace=False)
 df.loc[("val_1_for_col_1", "val_1_for_col_2", "val_1_for_col_3"):("val_3_for_col_1", "val_3_for_col_2", "val_3_for_col_3"), "col_name_1":"col_name_3"] 
 
 df.loc[df.var_name == 'value']['col_name']
+# Select columns based on the value of another column
 test_data.loc[test_data.UMR == 'Yes']['Outcome']
 
 # Slicing and subsetting using iloc method, similar to slicing lists
