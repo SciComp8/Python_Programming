@@ -4,6 +4,8 @@ when we use `X_cat_train_full[[col]]`, we get a DataFrame with just that single 
 
 A DataFrame allows us to maintain the structure (e.g., number of columns) for consistency with other DataFrame operations, while a one-dimensional Series might behave differently in certain operations.
 
+<br>
+
 ```python
 X_train['var_name'] = pd.DataFrame(imputer_mean.fit_transform(X_train['var_name']), index=X_train.index)
 
