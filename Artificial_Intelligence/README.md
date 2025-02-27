@@ -11,7 +11,7 @@
 - [Slice and index a dataframe](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/pandas/*pandas_slice_index.py#L173)
   - [Select target columns](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/pandas/*pandas_slice_index.py#L130)
   - [Randomly select columns](https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/pandas/*pandas_slice_index.py#L165)
-- Split data into training and validation sets before any fitting of preprocessing steps to avoid [train-test contamination](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Train_Test_Contamination.md)
+- Split data into training and validation sets before any fitting of preprocessing steps (e.g., imputation) to avoid [train-test contamination](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Train_Test_Contamination.md)
   - [Use `train_test_split`](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Decision_Tree_Price.py#L33)
   - [Randomly select rows](https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/pandas/*pandas_slice_index.py#L70)
 
@@ -20,14 +20,14 @@
 
 
 ## Feature engineering
-- [Manage missing values](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Manage_Missingness.py#L114)
-  - [Impute missing values](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Manage_Missingness.py#L61)
-  - [Drop missing values](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Manage_Missingness.py)
 - Encode categorical variables
   - [Which variables are categorical?](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/List_Categorical_Variable.py)
   - [Ordinal encoding](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Ordinal_Encoding.py)
   - [One-hot encoding](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/One_Hot_Encoding.py#L65)
   - *Should the year be encoded as the original integer or using one-hot encoding?* It depends. If the year has a meaningful numeric relationship with the target (e.g., older years might correlate with higher frequency of a disease), keep it as an integer. However, if specific years have unique relationships with the target, the year is better treated using one-hot encoding.
+- [Manage missing values](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Manage_Missingness.py#L114)
+  - [Impute missing values](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Manage_Missingness.py#L61)
+  - [Drop missing values](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Manage_Missingness.py)
 - [Normalize a feature](https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/pandas/*pandas_summary_statistics.py)
 
 ## Build a model: define -- fit -- predict -- evaluate
