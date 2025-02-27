@@ -63,9 +63,9 @@ print('Categorical columns that will be one-hot encoded:', low_cardinality_cols)
 print('\nCategorical columns that will be dropped from the dataset:', high_cardinality_cols)
 
 ### ! Quick OH method 1: 
-X_train = pd.get_dummies(data_train[features]) 
-X_valid = pd.get_dummies(data_valid[features]) #
-X_train, X_valid = X_train.align(X_valid, join='left', axis=1)
+F_encoded_train = pd.get_dummies(data_train[features]) 
+F_encoded_valid = pd.get_dummies(data_valid[features]) #
+F_encoded_train, F_encoded_valid = F_encoded_train.align(F_encoded_valid, join='left', axis=1)
 # After one-hot encoding, the validation set might have different columns (e.g., if some categories are missing in the validation set). 
 # This alignment step ensures consistency.
 # join='left': Ensures that the columns in X_valid match those in X_train. If X_valid has extra columns, they are dropped. If X_valid is missing columns, they are added (with default values of 0).
