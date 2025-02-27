@@ -27,7 +27,7 @@
   - [Which variables are categorical?](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/List_Categorical_Variable.py)
   - [Ordinal encoding](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Ordinal_Encoding.py)
   - [One-hot encoding](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/One_Hot_Encoding.py#L65)
-  - Case: should the year be encoded as the original integer or using one-hot encoding? It depends. If the year has a meaningful numeric relationship with the target (e.g., older years might correlate with higher frequency of a disease), keep it as an integer. However, if specific years have unique relationships with the target, the year is better treated using one-hot encoding.
+  - *Should the year be encoded as the original integer or using one-hot encoding?* It depends. If the year has a meaningful numeric relationship with the target (e.g., older years might correlate with higher frequency of a disease), keep it as an integer. However, if specific years have unique relationships with the target, the year is better treated using one-hot encoding.
 - [Normalize a feature](https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/pandas/*pandas_summary_statistics.py)
 
 ## Build a model: define -- fit -- predict -- evaluate
