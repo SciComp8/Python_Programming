@@ -17,3 +17,5 @@ The error occurs because the imputer expects a 2D array, but passing a single co
 ```python
 X_train['var_name'] = pd.DataFrame(imputer_mean.fit_transform(X_train[['var_name']]), index=X_train.index)
 ```
+
+*Note*: when we convert the imputed array to a DataFrame, we need explicitly pass the index that matches the index of `X_train`.
