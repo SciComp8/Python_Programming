@@ -1,3 +1,6 @@
+# References:
+# https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/
+
 import pandas as pd
 from xgboost import XGBRegressor
 from sklearn.metrics import mean_absolute_error
