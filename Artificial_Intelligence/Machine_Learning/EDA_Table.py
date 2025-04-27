@@ -1,3 +1,5 @@
+# Goal: Test bivariate relationships between predictors and targets
+
 import pandas as pd
 from scipy.stats import fisher_exact, mannwhitneyu, spearmanr
 
