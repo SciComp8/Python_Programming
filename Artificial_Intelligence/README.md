@@ -17,7 +17,7 @@
 
 ## Data exploration
 - [Explore data with summary statistics](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/pandas/*pandas_summary_statistics.py)
-
+- [Generate a bivariate relationship table](Artificial_Intelligence/Machine_Learning/EDA_Table.py)
 
 ## Feature engineering
 - Encode categorical variables
