@@ -141,6 +141,9 @@ Select columns using the index name locator "loc" versus the index number locato
 
 df.loc[:, "col_name_1":"col_name_3"] # Select columns beginning from col_name_1 to col_name_3, and keep all rows
 
+sig_feature = sig_connectome + sig_meta
+df = df.loc[:, sig_feature]
+
 import time
 start_time = time.time()
 df.loc[:, "Column_1":"Column_3"]
