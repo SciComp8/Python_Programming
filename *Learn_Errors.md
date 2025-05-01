@@ -1,6 +1,7 @@
 # Major types of errors in Python programming
 ## Syntax errors, also known as parsing errors
-The syntax errors indicate the syntax or structure of the code is incorrect. They are detected by the compiler or the interpreter.
+These errors occur when Python cannot parse your code due to incorrect syntax. They are detected by the compiler or the interpreter.
+
 ### Concatenate 2 different types of objects
   ```python
   print('6 % 6 = ' + 6 % 6)
@@ -102,6 +103,8 @@ The syntax errors indicate the syntax or structure of the code is incorrect. The
 ### Not putting strings in single quotes or double quotes
 
 ## Runtime Errors
+These errors occur when an operation is performed on incompatible data types (e.g., comparing an integer with a string).
+
 ### No compatible binary
   ```python
   DEBUG [main] Printing verbose output
