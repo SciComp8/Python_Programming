@@ -124,6 +124,24 @@ The syntax errors indicate the syntax or structure of the code is incorrect. The
   RuntimeError: The size of tensor a (3) must match the size of tensor b (2) at non-singleton dimension 1
  ```
 
+### XGBoost is performed on incompatible data types
+  ```python
+  params = {
+              'objective':'binary:logistic',
+              'max_depth': 5,
+              'alpha': 10,
+              'learning_rate': 0.1,
+              'n_estimators': 100,
+              'enable_categorical': True
+          }
+  
+  xgb_model = XGBClassifier(**params)
+  xgb_model.fit(X_train, y_train.loc[:, 'Outcome_1'])
+  typeerror: '<' not supported between instances of 'int' and 'str'
+  ```
+- This error means that one or more of your target variables are a mix of data types (e.g., both integers and strings). 
+- When the decision tree tries to compare values using the "<" operator to determine splits, it fails if it encounters an integer and a string together.
+
 ## Logical Errors
 
 
