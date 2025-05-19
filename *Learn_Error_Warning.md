@@ -220,5 +220,10 @@ These errors occur when an operation is performed on incompatible data types (e.
   sqrt(-8)
   ```
 
-
+# Warning
+ ```python
+/usr/local/lib/python3.11/dist-packages/xgboost/core.py:160: UserWarning: [15:39:53] WARNING: /workspace/src/learner.cc:742: 
+Parameters: { "estimator__alpha", "estimator__colsample_bytree", "estimator__lambda", "estimator__learning_rate", "estimator__max_depth", "estimator__n_estimators", "estimator__subsample", "use_dmatrix" } are not used.
+ ```
+The warning message occurs as the parameters we are passing to XGBoostClassifierDMatrix through the param_grid in GridSearchCV are not being properly forwarded to the underlying XGBoost classifier. 
 
