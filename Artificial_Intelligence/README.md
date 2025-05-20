@@ -35,6 +35,7 @@
 - [Train a decision tree classifier](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Decision_Tree_Mortality.ipynb)
 - [Train a random forest regressor](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Random_Forest_Price.py)
 - [Train a gradient boosting regressor](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/XGBoost.py)
+- [Save model parameters and full model](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/XGBoost/Save_Model.py)
 
 ## Make a pipeline that bundles imputation, one-hot encoding, model training, and model evaluation
 - [Pipeline](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Pipeline.py)
@@ -44,4 +45,4 @@
 - [Use cross-validation (CV) to evaluate the impact of different arguments on model performance](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Cross_Validation.py); CV is suitable for small datasets, as computational burden isn't a big issue
 - [Define several models with varied arguments and select the model with the best performance](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Random_Forest_Price_V2.py)
 - Add more relevant features
-- Use another state-of-the-art model algorithm
+- Use another state-of-the-art model algorithm (e.g., graph neural network to process connectome)
