@@ -245,9 +245,14 @@ These errors occur when an operation is performed on incompatible data types (e.
   
       print(f"Best parameters: {grid_search_xgb.best_params_}")
   
-      return grid_search_xgb" ![image](https://github.com/user-attachments/assets/36bb487d-73c7-4254-8061-576bbfaa1ac5)
+      return grid_search_xgb"
+
+  model_xgb = optimized_grid_search_xgb_gpu(X_train, y_train)
+  model_xgb_best = grid_search_xgb.best_estimator_
+  y_pred = model_xgb_best.predict(X_test)
 
   NotFittedError: This XGBoostClassifierDMatrix instance is not fitted yet. Call 'fit' with appropriate arguments before using this   estimator.
+
 
   ```
 - The XGBClassifier base class has its own fitted state, but the wrapper `XGBoostClassifierDMatrix` introduces a separate `is_fitted_` flag, leading to mismatches.
