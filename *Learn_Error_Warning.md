@@ -145,6 +145,114 @@ These errors occur when an operation is performed on incompatible data types (e.
 - This error means that one or more of your target variables are a mix of data types (e.g., both integers and strings). 
 - When the decision tree tries to compare values using the "<" operator to determine splits, it fails if it encounters an integer and a string together.
 
+### XGBoost `NotFittedError`
+  ```Python
+  class XGBoostClassifierDMatrix(xgb.XGBClassifier, BaseEstimator, ClassifierMixin):
+      """
+      Wrapper for XGBoost classifier to accept DMatrix in fit.
+      """
+      def __init__(self, use_dmatrix=True, **kwargs):
+          super().__init__(**kwargs)
+          self.use_dmatrix = use_dmatrix  # Control DMatrix usage
+  
+      def fit(self, X, y=None, sample_weight=None, eval_set=None, **kwargs):
+          if self.use_dmatrix:
+              self.is_fitted_ = True  # Set fitted here for DMatrix
+              if isinstance(X, xgb.DMatrix):
+                  self.xgb_dm = X
+                  super().fit(X, y, sample_weight=sample_weight, eval_set=eval_set, **kwargs)
+              else:
+                  self.xgb_dm = xgb.DMatrix(X, label=y)
+                  super().fit(self.xgb_dm, y, sample_weight=sample_weight, eval_set=eval_set, **kwargs)
+          else:
+              super().fit(X, y, sample_weight=sample_weight, eval_set=eval_set, **kwargs)
+          return self
+  
+      def predict(self, X, output_margin=False, iteration_range=(0, 0),
+                  predict_type='auto', missing=np.nan, validate_features=True):
+          check_is_fitted(self, 'is_fitted_')
+          if self.use_dmatrix:
+              if isinstance(X, xgb.DMatrix):
+                  return super().predict(X, output_margin=output_margin, iteration_range=iteration_range,
+                                         predict_type=predict_type, missing=missing, validate_features=validate_features)
+              else:
+                  return super().predict(xgb.DMatrix(X), output_margin=output_margin, iteration_range=iteration_range,
+                                         predict_type=predict_type, missing=missing, validate_features=validate_features)
+          else:
+               return super().predict(X, output_margin=output_margin, iteration_range=iteration_range,
+                                         predict_type=predict_type, missing=missing, validate_features=validate_features)
+  
+      def fit_predict(self, X, y=None, sample_weight=None, eval_set=None, **fit_params):
+          """Fit to training data, then predict on X."""
+          if self.use_dmatrix:
+              if isinstance(X, xgb.DMatrix):
+                  self.xgb_dm = X
+                  self.fit(X, y, sample_weight=sample_weight, eval_set=eval_set, **fit_params)
+                  return self.predict(X)
+              else:
+                  self.xgb_dm = xgb.DMatrix(X, label=y)
+                  self.fit(self.xgb_dm, y, sample_weight=sample_weight, eval_set=eval_set, **fit_params)
+                  return self.predict(X)
+          else:
+              self.fit(X, y, sample_weight=sample_weight, eval_set=eval_set, **fit_params)
+              return self.predict(X)
+  
+  
+  def optimized_grid_search_xgb_gpu(X_train, y_train):
+      """
+      Optimizes XGBoost SingleOutputClassifier GridSearchCV for GPU (CUDA) without separate test data.
+  
+      Args:
+          X_train: Training features.
+          y_train: Training target.
+  
+      Returns:
+          The best fitted GridSearchCV object.
+      """
+  
+      param_grid = {
+          'learning_rate': [0.1],
+          'max_depth': [3],
+          'colsample_bytree': [0.8],
+          'subsample': [0.8],
+          'reg_lambda': [1],
+          'reg_alpha': [0],
+          'n_estimators': [100],
+      }
+  
+      # Convert to numpy arrays
+      X_train_np = np.array(X_train)
+      y_train_np = np.array(y_train)
+  
+  
+      def create_model():
+          xgb_clf = XGBoostClassifierDMatrix(  # Use the wrapper
+              device='cuda',  # Set device here
+              enable_categorical=True,
+              use_dmatrix=False
+          )
+          return xgb_clf
+  
+      # Wrap model creation and GridSearchCV in a function
+      def train_model():
+          xgb_clf = create_model()
+          grid_search_clf = GridSearchCV(xgb_clf, param_grid, cv=5, scoring='accuracy', verbose=1)
+          grid_search_clf.fit(X_train_np, y_train_np) # Pass numpy arrays to gridsearch
+          return grid_search_clf
+  
+      grid_search_xgb = train_model()
+      best_model = grid_search_xgb.best_estimator_
+  
+      print(f"Best parameters: {grid_search_xgb.best_params_}")
+  
+      return grid_search_xgb" ![image](https://github.com/user-attachments/assets/36bb487d-73c7-4254-8061-576bbfaa1ac5)
+
+  NotFittedError: This XGBoostClassifierDMatrix instance is not fitted yet. Call 'fit' with appropriate arguments before using this   estimator.
+
+  ```
+- The XGBClassifier base class has its own fitted state, but the wrapper `XGBoostClassifierDMatrix` introduces a separate `is_fitted_` flag, leading to mismatches.
+- Since we set `use_dmatrix=False` in `optimized_grid_search_xgb_gpu()`, the `is_fitted_ flag` in `predict()` is never set, causing `check_is_fitted()` to fail in `predict()`.
+
 ## Logical Errors
 
 
