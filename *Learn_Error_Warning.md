@@ -1,6 +1,6 @@
 # Major types of errors in Python programming
 ## Syntax errors, also known as parsing errors
-These errors occur when Python cannot parse your code due to incorrect syntax. They are detected by the compiler or the interpreter.
+These errors occur when Python cannot parse our code due to incorrect syntax. They are detected by the compiler or the interpreter.
 
 ### Concatenate 2 different types of objects
   ```python
