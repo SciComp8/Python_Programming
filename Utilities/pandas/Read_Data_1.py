@@ -1,6 +1,6 @@
 # References:
 # https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html
-# https://medium.com/data-science/its-time-to-say-goodbye-to-pd-read-csv-and-pd-to-csv-27fbc74e84c5
+
 pd.read_csv()
 file_name = 'CONNECTOME_MATRICES.csv'
 con_mat = pd.read_csv(file_path + file_name, index_col='Id')
