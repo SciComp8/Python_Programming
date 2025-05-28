@@ -4,6 +4,11 @@ class IntronicVariant:
         self.location = location
         self.description = description
         # Alternatively, we can write self.gene, self.location, self.description = gene, location, description
+
+# Why use `self` in Python class method set_variant_info?
+# Without self, variables would be local to the method `set_variant_info` and disappear after `set_variant_info` finishes.
+# `self` initializes the object when created. `self` ensures values are stored in the object itself, so they persist.
+
 variant = IntronicVariant()
 variant.set_variant_info('Gene_XYZ', 'Intron 3', 'A common intronic variant associated with disease M')
 
