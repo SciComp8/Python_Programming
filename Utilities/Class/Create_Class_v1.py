@@ -122,6 +122,13 @@ class SuperFalafel(MultiFalafel):
         else:
             super().eat() # Call the eat method of the parent class (MultiFalafel)
 
+# super() tells Python:
+# "Hey parent class(es), I’m your child. Please initialize yourself first before I adds anything extra."
+# In this case, it calls the __init__() of MultiFalafel (the parent class).
+# Python follows the Method Resolution Order to decide which __init__() to call first. 
+
+print(SuperFalafel.__mro__)
+
 super_falafel = SuperFalafel(num=3, num_to_eat=2, supersize=True) # 3 falafel(s) created
 super_falafel.eat() # 2 supersized falafel(s) got eaten
 
