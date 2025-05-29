@@ -57,7 +57,10 @@ class XGBoostClassifierDMatrix(xgb.XGBClassifier, BaseEstimator, ClassifierMixin
         return self.predict(X)
 
 print(XGBoostClassifierDMatrix.__mro__)
- 
+
+# Why Use DMatrix instead of NumPy array, Pandas DataFrame, SciPy sparse matrix, or CSV file?
+# Optimized for fast matrix operations (2-5x faster than raw arrays); required for GPU acceleration (device='cuda'); compresses data (critical for large datasets).
+
 def optimized_grid_search_xgb_gpu(X_train, y_train):
     param_grid = {
         'learning_rate': [0.1, 0.05],
@@ -76,7 +79,7 @@ def optimized_grid_search_xgb_gpu(X_train, y_train):
     model = XGBoostClassifierDMatrix(
         device='cuda',
         enable_categorical=True,
-        use_dmatrix=False 
+        use_dmatrix=True # 
     )
 
     grid_search = GridSearchCV(
