@@ -41,7 +41,7 @@ class XGBoostClassifierDMatrix(xgb.XGBClassifier, BaseEstimator, ClassifierMixin
             if isinstance(X, xgb.DMatrix):
                 self.xgb_dm = X
             else:
-                self.xgb_dm = xgb.DMatrix(X, label=y)
+                self.xgb_dm = xgb.DMatrix(X, label=y) # labels/target values (y) for supervised learning
             super().fit(self.xgb_dm, y, sample_weight=sample_weight, eval_set=eval_set, **kwargs)
         else:
             super().fit(X, y, sample_weight=sample_weight, eval_set=eval_set, **kwargs)
