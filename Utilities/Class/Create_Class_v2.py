@@ -34,6 +34,11 @@ print ("Car brand: {}, Maximum speed: {}, Mileage: {}.".format(m4.brand, m4.max_
 
 isinstance(m4, Tesla) # True
 isinstance(m4, Car) # True
+# isinstance() is a built-in Python function that checks if an object is of a certain type (or a subclass).
+# isinstance(object, Class) returns True or False.
+a = 1
+isinstance(a, int)
+# True
 
 # Create a class with attributes and method 
 class Car:
