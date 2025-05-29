@@ -1,6 +1,8 @@
-# Ref1: Attention is all you need. https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf
-# Ref2: https://pytorch.org/docs/stable/_modules/torch/nn/modules/transformer.html#Transformer
+# References: 
+# Attention is all you need. https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf
+# https://pytorch.org/docs/stable/_modules/torch/nn/modules/transformer.html#Transformer
 # A weighting scheme enables a *transformer* model to give varying degrees of attention to different segments of the input when generating an output.
+# https://harvard-iacs.github.io/2021-CS109B/lectures/lecture25/
 
 # Set up the working environment
 pip3 install torch torchvision torchaudio
