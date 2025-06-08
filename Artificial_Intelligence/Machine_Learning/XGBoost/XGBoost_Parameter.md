@@ -7,6 +7,7 @@
 |Fraction of observations used for each tree: `subsample` | 0.8 | Reduce it to 0.5 to prevent overfitting: [0.5, 0.8] | Decrease/increase |
 |Fraction of features used for each tree: `colsample_bytree` | 0.8 | Reduce it 0.5 to prevent overfitting: [0.5, 0.8] | Decrease/increase |
 |L2 regularization term on leaf weights: `lambda`| 1 | Increase it if the model performs poorly: [1, +∞) | Increase/decrease |
+|L1 regularization term on leaft weights: `alpha` | 0 | Increase it if the model performs poorly: [0, +∞) | Increase/decrease | 
 
 
 ## More reading
