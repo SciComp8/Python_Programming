@@ -1,6 +1,6 @@
 
 
-| Parameter | Starting Value | Common Range | How to Tune in Overfitting/Underfitting Situations
+| Common Parameter | Starting Value | Common Range | How to Tune in Overfitting/Underfitting Situations
 |----------|----------|----------|----------|
 |Learning rate: `eta` | 0.1 | Reduce it to 10% of its value 10 steps: [10<sup>-1</sup>, 10<sup>-11</sup>] | Decrease/increase | 
 |Number of trees: `n_estimators` | 500 | [100, 1000] | Decrease/increase |
