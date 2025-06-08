@@ -4,6 +4,8 @@
 
 This repository presents curated Python theory and practice inspired from *Python Programming*, *Data Science*, *Computer Science*, *AI in Medicine*, and *Bioinformatics Algorithm*, with real-world applications in diverse scientific computing domains. 
 
+Python looks like a [new language](https://github.com/SciComp8/learning-languages/blob/master/Korean/books.md) for me: it has so many words and expressions, and I decide which ones to combine to draft a novel plot or speech.
+
 | Python Basics | Python Advance | Data Structure | [Artificial Intelligence](https://github.com/SciComp8/Python_Programming/tree/main/Artificial_Intelligence) | 
 |----------|----------|----------|----------|
 | [Python Overview](Python_Overview.ipynb) | [Argument](Utilities/Function/Argument.py) [kwargs](Utilities/Function/**kwargs.py) | [String](Utilities/String) | [Convolutional Neural Network](Artificial_Intelligence/AI_Medicine/Programing_Assignment3.ipynb) | 
