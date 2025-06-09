@@ -7,6 +7,7 @@
 
 ## Dataframe manipulation
 - [Read data](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/pandas/Read_Data.py)
+  - [Check column names](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/pandas/*pandas_intro_sort.py#L40)
 - [Deep copy features](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Decision_Tree_Price.py#L25)
 - [Slice and index a dataframe](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/pandas/*pandas_slice_index.py#L173)
   - [Select target columns](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/pandas/*pandas_slice_index.py#L130)
