@@ -1,3 +1,6 @@
+# The random search approach is efficient as it randomly samples from the set of possible hyperparameters values,
+# rather than sampling all combinations of hyperparameters in Grid Search
+
 # Import packages
 import xgboost as xgb
 from sklearn.base import BaseEstimator, ClassifierMixin
