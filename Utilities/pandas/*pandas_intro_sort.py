@@ -40,6 +40,14 @@ df.values # values attribute extracts the data values in 2-D numpy array
 df.columns #! columns attribute extracts the column names
 # Index(['var_name_1', 'var_name_2', 'var_name_3'], dtype='object')
 
+# Check if a column name is in a pandas data frame
+df = pd.DataFrame({'A': [7, 7, 2], 'B': [3, 8, 9]})
+if 'A' in df.columns:
+    print("Column 'A' exists")
+    
+if 'C' not in df.columns:
+    print("Column 'C' does not exist")
+
 df.columns = new_column # assign new column names
 
 df.index # index attribute extracts the row names/numbers
