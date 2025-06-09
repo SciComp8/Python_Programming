@@ -3,7 +3,6 @@ import xgboost as xgb
 from sklearn.base import BaseEstimator, ClassifierMixin
 from sklearn.utils.validation import check_is_fitted
 from scipy.sparse import issparse
-from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import RandomizedSearchCV
 from scipy import stats 
 
