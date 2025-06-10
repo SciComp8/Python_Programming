@@ -16,6 +16,7 @@ Python looks like a [human language](https://github.com/SciComp8/learning-langua
 | [Arithmetic Calculations](Utilities/Math/Number) | [Symbolic Calculations](Utilities/Symbolic_Computation.py) | [Set](Utilities/Set) | [Logistic Regression with Grid Search](Artificial_Intelligence/Machine_Learning/Logistic_Regression_Mortality.ipynb) | 
 | [True Or False](Utilities/Operator/Boolean_Operator.py) | [Combinatorics](Utilities/Python_Combinatorics.ipynb) | [Class](Utilities/Class) [`self`](Utilities/Class/Create_Class_v1.py#L8) [`__init__`](Utilities/Class/Create_Class_v1.py#L51) [`super()`](Utilities/Class/Create_Class_v1.py#L119) [`isinstance()`](Utilities/Class/Create_Class_v2.py#L35) | [PyTorch](Artificial_Intelligence/PyTorch) | 
 | [Work with Time](https://github.com/SciComp8/Python_Programming/tree/main/Utilities/Date) | [Format Specifier](Utilities/String/1_Format_String.py#L30) | | [Common Procedures](Artificial_Intelligence)
+| | [Manage Python Versions](https://github.com/pyenv/pyenv) | |
 
 
 
