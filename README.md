@@ -24,4 +24,6 @@ Python looks like a [human language](https://github.com/SciComp8/learning-langua
 - [Integrate with seaborn by overlaying statistical annotations](https://github.com/trevismd/statannotations)
 - [Automate data preprocessing, machine learning model construction, and hyper-parameters tuning](https://github.com/mljar/mljar-supervised)
 
+# Getting Help
 
+If you have any inquiries, don't hesitate to reach out at sci.comp.8@outlook.com.
