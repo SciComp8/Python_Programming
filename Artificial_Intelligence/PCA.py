@@ -11,7 +11,7 @@ from tensorflow_probability import distributions as tfd
 tf.enable_v2_behavior()
 
 plt.style.use('ggplot')
-warnings.filterwarnings('ignore')
+warnings.filterwarnings('ignore') # Suppress warnings
 
 def probabilistic_pca(data_dim, latent_dim, num_datapoints, stddv_datapoints):
   w = yield tfd.Normal(loc=tf.zeros([data_dim, latent_dim]),
