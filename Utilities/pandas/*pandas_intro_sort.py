@@ -82,4 +82,8 @@ df[(df["column_name_1"]  == "labrador") & (df["column_name_1"]  == "labrador2")]
 is_lab_or_lab2 = df["column_name_1"].isin(["labrador", "labrador"])
 df[is_lab_or_lab2] # subset rows based on multiple values of a categorical variable
 
-df.drop(columns=['column_name'], axis=1, inplace=True) # drop a column
+df.drop(columns=['column_name_1', 'column_name_2', 'column_name_3'], inplace=True) # drop multiple columns
+# Reference: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html
+# inplace: bool, default = False
+# If False, the function returns a new modified copy of the object.
+# If True, the changes are applied directly to the original object, and nothing is returned.
