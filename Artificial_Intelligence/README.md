@@ -4,6 +4,7 @@
 ## Environment setup
 - [What files are contained in training and test folders?](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/Generator.py#L122)
 - [Create symbolic links to access the file from another location without duplicating it](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/File/Create_SymbolicLink.py)
+- [Suppress warning messages](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/PCA.py#L14)
 
 ## Dataframe manipulation
 - [Read data](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/pandas/Read_Data.py)
