@@ -129,10 +129,10 @@ df.loc[("val_1_for_col_1", "val_1_for_col_2"):("val_3_for_col_1", "val_3_for_col
 """
 Select columns
 """
-features = ['col_name_1', 'col_name_2', 'col_name_3']
-X = train_data[features]
-cat_features = [col for col in X_trainl.columns if X_train[col].dtype == 'object']
-num_features = [col for col in X_trainl.columns if X_train[col].dtype in ['int64', 'float64']]
+target_features = ['col_name_1', 'col_name_2', 'col_name_3']; X_train = train_data[target_features]
+cat_features_selected = [col for col in X_train.columns if X_train[col].dtype == 'object']
+num_features_selected = [col for col in X_train.columns if X_train[col].dtype in ['int64', 'float64']]
+y_train = X_train.outcome
 
 """
 Select columns using the index name locator "loc" versus the index number locator "iloc
