@@ -1,6 +1,6 @@
 # Art of Python Exploration and Exploitation
 
-*Last updated: 12 June 2025*
+*Last updated: 16 June 2025*
 
 This repository presents curated Python theory and practice inspired from *Python Programming*, *Data Science*, *Computer Science*, *AI in Medicine*, and *Bioinformatics Algorithm*, with real-world applications in diverse scientific computing domains. 
 
