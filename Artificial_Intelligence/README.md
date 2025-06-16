@@ -14,6 +14,7 @@
   - [Select target columns](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/pandas/*pandas_slice_index.py#L130)
   - [Randomly select columns](https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/pandas/*pandas_slice_index.py#L165)
   - [Drop a columm](https://github.com/SciComp8/Python_Programming/blob/main/Utilities/pandas/*pandas_intro_sort.py#L86)
+  - [Create balanced folds in cross-validation for regression predictor](), where each each bin/stratum includes a roughly equal number of samples 
 - Split data into training and validation sets before any fitting of preprocessing steps (e.g., imputation) to avoid [train-test contamination](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Train_Test_Contamination.md)
   - [Use `train_test_split`](https://github.com/SciComp8/Python_Programming/blob/main/Artificial_Intelligence/Machine_Learning/Decision_Tree_Price.py#L33)
   - [Randomly select rows](https://github.com/ScienceComputing/Python_Programming/blob/main/Utilities/pandas/*pandas_slice_index.py#L70)
