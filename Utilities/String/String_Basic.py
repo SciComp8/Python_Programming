@@ -1,3 +1,7 @@
+# Strings are non-scalar objects that can be subdivided
+
+amino_acid = 'glutamic acid'
+
 # Find characters in amino_acid variable
 length_string = len(amino_acid)
 
@@ -9,6 +13,13 @@ statement = "Number of characters in the name of this amino acid:"
 
 # Concatenate strings and print result
 print(statement+' '+to_string)
+
+# Successively concatenate strings
+3 * amino_acid
+# '3' * amino_acid; error
+
+# Index a string
+amino_acid[0]
 
 # Select the first 3 characters
 amino_acid[:3]
