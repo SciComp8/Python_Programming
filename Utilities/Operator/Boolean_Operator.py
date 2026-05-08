@@ -33,5 +33,11 @@ x == 2.1
 print(x)
 # 1.2000000000000002
 
+4 > + 4
+# False
+
+4 == +4
+# True
+
 # Filter the exp column to include only the rows where y is False
 exp_yno = df.exp[~y] # The ~ operator is a logical NOT operation. It inverts the boolean values in y.
