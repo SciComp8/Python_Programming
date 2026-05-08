@@ -1,10 +1,9 @@
 # Art of Python Exploration and Exploitation
 
-*Last updated: 16 June 2025*
+*Last updated: 9 May 2026*
 
-This repository presents curated Python theory and practice inspired from *Python Programming*, *Data Science*, *Computer Science*, *AI in Medicine*, and *Bioinformatics Algorithm*, with real-world applications in diverse scientific computing domains. 
+This repository presents curated Python theory and practice inspired from *Python Programming*, *Data Science*, *Computer Science*, *AI in Medicine*, and *Bioinformatics Algorithm*, with applications in diverse scientific computing domains. 
 
-Python looks like a [human language](https://github.com/SciComp8/learning-languages/blob/master/Korean/books.md): it has so many words and expressions, and we decide which ones to combine to tell our story.
 
 | Python Basics | Python Advance | Data Structure | [Artificial Intelligence](https://github.com/SciComp8/Python_Programming/tree/main/Artificial_Intelligence) | 
 |----------|----------|----------|----------|
