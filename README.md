@@ -1,4 +1,4 @@
-# Art of Python Exploration and Exploitation
+# Art of Python
 
 *Last updated: 9 May 2026*
 
